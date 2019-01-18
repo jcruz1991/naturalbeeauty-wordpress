@@ -1,0 +1,146 @@
+/*--------------------------------------------------------------
+# Forms
+--------------------------------------------------------------*/
+
+
+input {
+
+    &[type="button"],
+    &[type="reset"],
+    &[type="submit"] {
+        background: #FFC107;
+        padding: 0 20px;
+        height: 40px;
+        color: #FFF;
+        border: 0;
+        -moz-transition: all 0.3s ease;
+        -webkit-transition: all 0.3s ease;
+        transition: all 0.3s ease;
+    }
+}
+
+button:focus {
+    outline: 0;
+}
+
+input {
+
+    &[type="button"]:focus,
+    &[type="reset"]:focus,
+    &[type="submit"]:focus {
+        outline: 0;
+    }
+}
+
+button:active {
+    outline: 0;
+}
+
+input {
+
+    &[type="button"]:active,
+    &[type="reset"]:active,
+    &[type="submit"]:active {
+        outline: 0;
+    }
+
+    &[type="text"],
+    &[type="email"],
+    &[type="url"],
+    &[type="password"],
+    &[type="search"],
+    &[type="number"],
+    &[type="tel"],
+    &[type="range"],
+    &[type="date"],
+    &[type="month"],
+    &[type="week"],
+    &[type="time"],
+    &[type="datetime"],
+    &[type="datetime-local"],
+    &[type="color"] {
+        color: #404040;
+        border: 1px solid #EEE;
+        transition: all 0.3s ease-in-out;
+        -moz-transition: all 0.3s ease-in-out;
+        -webkit-transition: all 0.3s ease-in-out;
+        vertical-align: top;
+    }
+}
+
+textarea {
+    color: #404040;
+    border: 1px solid #EEE;
+    transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -webkit-transition: all 0.3s ease-in-out;
+    vertical-align: top;
+}
+
+select {
+    border: 1px solid #EEE;
+    height: 40px;
+    padding: 3px 40px 3px 8px;
+    background-color: transparent;
+    line-height: 100%;
+    outline: 0;
+    background-image: url("images/arrow.png");
+    background-position: right center;
+    background-repeat: no-repeat;
+    position: relative;
+    cursor: pointer;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+}
+
+input {
+
+    &[type="text"]:focus,
+    &[type="email"]:focus,
+    &[type="url"]:focus,
+    &[type="password"]:focus,
+    &[type="search"]:focus,
+    &[type="number"]:focus,
+    &[type="tel"]:focus,
+    &[type="range"]:focus,
+    &[type="date"]:focus,
+    &[type="month"]:focus,
+    &[type="week"]:focus,
+    &[type="time"]:focus,
+    &[type="datetime"]:focus,
+    &[type="datetime-local"]:focus,
+    &[type="color"]:focus {
+        outline: 0;
+    }
+}
+
+textarea:focus {
+    outline: 0;
+}
+
+input {
+
+    &[type="text"],
+    &[type="email"],
+    &[type="url"],
+    &[type="password"],
+    &[type="search"],
+    &[type="number"],
+    &[type="tel"],
+    &[type="range"],
+    &[type="date"],
+    &[type="month"],
+    &[type="week"],
+    &[type="time"],
+    &[type="datetime"],
+    &[type="datetime-local"],
+    &[type="color"] {
+        padding: 3px 8px;
+        height: 40px;
+    }
+}
+
+textarea {
+    padding: 8px;
+    width: 100%;
+}

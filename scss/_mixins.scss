@@ -1,0 +1,140 @@
+@import 'flexbox';
+
+/*
+*   Calculate rem and set
+*   font size.
+*/
+@function calculateRem($size) {
+    $remSize: $size / 16px;
+    @return $remSize * 1rem;
+}
+
+@mixin font-size($size) {
+    font-size: $size;
+    font-size: calculateRem($size);
+}
+
+/*
+*   Transitions
+*  
+*/
+
+@mixin transition($args...) {
+    -webkit-transition: $args;
+    -moz-transition: $args;
+    -ms-transition: $args;
+    -o-transition: $args;
+    transition: $args;
+}
+
+/*
+*   Animations
+*  
+*/
+@mixin keyframes($animation-name) {
+    @-webkit-keyframes #{$animation-name} {
+        @content;
+    }
+
+    @-moz-keyframes #{$animation-name} {
+        @content;
+    }
+
+    @-ms-keyframes #{$animation-name} {
+        @content;
+    }
+
+    @-o-keyframes #{$animation-name} {
+        @content;
+    }
+
+    @keyframes #{$animation-name} {
+        @content;
+    }
+}
+
+@mixin animation($str) {
+    -webkit-animation: #{$str};
+    -moz-animation: #{$str};
+    -ms-animation: #{$str};
+    -o-animation: #{$str};
+    animation: #{$str};
+}
+
+/*
+*   Transform
+*  
+*/
+@mixin transform($transforms) {
+    -moz-transform: $transforms;
+    -o-transform: $transforms;
+    -ms-transform: $transforms;
+    -webkit-transform: $transforms;
+    transform: $transforms;
+}
+
+
+/*
+*   Transform Origin
+*  
+*/
+@mixin transform-origin ($origin) {
+    -moz-transform-origin: $origin;
+    -o-transform-origin: $origin;
+    -ms-transform-origin: $origin;
+    -webkit-transform-origin: $origin;
+    transform-origin: $origin;
+}
+
+/*
+*   Box Shadow
+*  
+*/
+@mixin box-shadow($top, $left, $blur, $color, $inset: false) {
+    @if $inset {
+        -webkit-box-shadow: inset $top $left $blur $color;
+        -moz-box-shadow: inset $top $left $blur $color;
+        box-shadow: inset $top $left $blur $color;
+    }
+
+    @else {
+        -webkit-box-shadow: $top $left $blur $color;
+        -moz-box-shadow: $top $left $blur $color;
+        box-shadow: $top $left $blur $color;
+    }
+}
+
+
+/**
+* MEDIA SCREEN QUERIES
+**/
+
+@mixin mediaSm {
+    @media screen and (max-width: 39.9375em) {
+        @content;
+    }
+}
+
+@mixin mediaMd {
+    @media screen and (min-width: 40em) {
+        @content;
+    }
+}
+
+@mixin mediaMdOnly {
+    @media screen and (min-width: 40em) and (max-width: 63.9375em) {
+        @content;
+    }
+}
+
+@mixin mediaLg {
+    @media screen and (min-width: 64em) {
+        @content;
+    }
+}
+
+@mixin mediaLgOnly {
+    @media screen and (min-width: 64em) and (max-width: 74.9375em) {
+        @content;
+    }
+}

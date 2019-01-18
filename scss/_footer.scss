@@ -1,0 +1,86 @@
+/*--------------------------------------------------------------
+## Footer
+--------------------------------------------------------------*/
+#nb-colophon {
+    background: #F0EBE6;
+
+    .nb-top-footer {
+        .container {
+            .row {
+                padding-top: 50px;
+                @include font-size(16px);
+
+                li {
+                    a {
+                        color: #BEAF8C;
+                    }
+                }
+
+                .custom-logo-link {
+                    img {
+                        width: 100px;
+                        height: auto;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.page-template-home-template #nb-colophon,
+.home.blog #nb-colophon {
+    margin-top: 0
+}
+
+#nb-colophon a {
+    text-decoration: none;
+}
+
+#nb-colophon .widget-title {
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+}
+
+#nb-top-footer {
+    padding: 50px 0;
+}
+
+.nb-top-footer {
+    margin-left: -3%;
+}
+
+.nb-footer {
+    float: left;
+    width: 22%;
+    margin-left: 3%;
+}
+
+.nb-footer .widget {
+    margin-bottom: 30px;
+}
+
+.nb-footer .widget:last-child {
+    margin-bottom: 0;
+}
+
+.nb-footer ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nb-footer ul li {
+    padding: 2px 0 2px 0;
+}
+
+#nb-bottom-footer {
+    padding: 30px 0;
+    color: #AAA;
+    line-height: 1.2;
+    text-align: center;
+}
+
+.nb-site-info a {
+    border-bottom: 1px dotted #AAA;
+}

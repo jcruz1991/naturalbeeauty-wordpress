@@ -1,0 +1,150 @@
+/*--------------------------------------------------------------
+## Header
+--------------------------------------------------------------*/
+
+#nb-masthead {
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: transparent;
+    height: 120px;
+    z-index: 99;
+    @include transition(height ease-out 0.3s);
+}
+
+.blog.home #nb-masthead {
+    margin-bottom: 40px;
+}
+
+.nb-sticky-header #nb-masthead {
+    position: fixed;
+    left: 0;
+    right: 0;
+}
+
+.nb-sticky#nb-masthead {
+    height: 74px;
+}
+
+#nb-content {
+    clear: both;
+}
+
+.nb-sticky-header #nb-content {
+    position: relative;
+    z-index: 9;
+    padding-top: 94px;
+}
+
+.home.blog.nb-sticky-header #nb-content {
+    padding-top: 134px;
+}
+
+#nb-site-branding {
+    float: left;
+    width: 30%;
+    padding: 15px 0;
+    transition: padding 0.3s ease;
+    -moz-transition: padding 0.3s ease;
+    -webkit-transition: padding 0.3s ease;
+}
+
+.nb-sticky #nb-site-branding {
+    padding: 5px 0;
+}
+
+#nb-site-branding img {
+    max-height: 110px;
+    width: auto;
+}
+
+.nb-main-header {
+    background: #f9f9f9;
+    padding: 45px 0;
+    margin-bottom: 40px;
+}
+
+.nb-main-title {
+    margin: 0 0 15px;
+    letter-spacing: 1px;
+    font-weight: 400;
+    text-transform: uppercase;
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+}
+
+.nb-site-title {
+    font-family: $header-font;
+    font-weight: 700;
+    margin: 0 0 8px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    font-size: 32px;
+    line-height: 1;
+
+    a {
+        text-decoration: none;
+        color: #FFC107;
+    }
+}
+
+.nb-site-description {
+    color: #EEE;
+    margin: 0;
+    font-size: 15px;
+    font-style: italic;
+    line-height: 1;
+
+    a {
+        color: #333;
+    }
+}
+
+.breadcrumb-trail,
+.woocommerce .woocommerce-breadcrumb {
+    font-size: 15px;
+    margin: 0;
+    color: inherit;
+}
+
+.breadcrumb-trail ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
+    li {
+        display: inline-block;
+
+        &:after {
+            content: "/";
+            margin: 0 6px;
+        }
+
+        &:last-child:after {
+            display: none;
+        }
+    }
+}
+
+.woocommerce .woocommerce-breadcrumb a,
+.breadcrumb-trail a {
+    color: #000;
+}
+
+.woocommerce .woocommerce-breadcrumb a:hover,
+#total-breadcrumbs a:hover {
+    color: #FFC107;
+}
+
+.taxonomy-description,
+.term-description {
+    margin-bottom: 15px;
+}
+
+.taxonomy-description p:last-child,
+.term-description p:last-child {
+    margin-bottom: 0;
+}

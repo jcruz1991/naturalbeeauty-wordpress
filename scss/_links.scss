@@ -1,0 +1,25 @@
+/*--------------------------------------------------------------
+## Links
+--------------------------------------------------------------*/
+
+a {
+	color: #505050;
+	text-decoration: none;
+	@include transition(all ease-in 0.4s);
+
+	&:visited {
+		color: #505050;
+	}
+
+	&:hover {
+		color: #E07747;
+		text-decoration: none;
+	}
+
+	&:focus,
+	&:hover,
+	&:active {
+		outline: 0;
+		text-decoration: none;
+	}
+}

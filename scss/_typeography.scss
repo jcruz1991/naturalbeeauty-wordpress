@@ -1,0 +1,134 @@
+/*--------------------------------------------------------------
+# Typography
+--------------------------------------------------------------*/
+body,
+input,
+select,
+textarea {
+	color: #444;
+	line-height: 1.6;
+	font-family: $text-font;
+	font-weight: 400;
+}
+
+button {
+	display: inline-block;
+	background: transparent;
+	border: 2px solid #BEAF8C;
+	padding: 10px 15px;
+	font-family: $header-font;
+	font-weight: 700;
+	border-radius: 25px;
+	font-size: 13px;
+	line-height: 1;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	background-color: transparent;
+	transition: background-color 0.3s;
+	color: black;
+	@include transition(all ease 0.3s);
+
+	&:hover {
+		background: #333;
+		border: 2px solid #333;
+		color: white;
+	}
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	margin: 0;
+	font-weight: 700;
+	line-height: 1.2;
+	font-family: $header-font;
+}
+
+h1 {
+	font-size: 28px;
+	margin-bottom: 15px;
+}
+
+h2 {
+	font-size: 26px;
+	margin-bottom: 15px;
+}
+
+h3 {
+	font-size: 24px;
+	margin-bottom: 15px;
+}
+
+h4 {
+	font-size: 22px;
+	margin-bottom: 10px;
+}
+
+h5 {
+	font-size: 20px;
+	margin-bottom: 10px;
+}
+
+h6 {
+	font-size: 18px;
+	margin-bottom: 10px;
+}
+
+p {
+	margin: 0 0 15px;
+	line-height: 36px;
+	font-weight: 300;
+}
+
+dfn,
+cite,
+em,
+i {
+	font-style: italic;
+}
+
+blockquote {
+	margin: 0 15px;
+}
+
+address {
+	margin: 0 0 15px;
+}
+
+pre {
+	background: #eee;
+	font-family: $text-font;
+	font-size: 15px;
+	line-height: 1.6;
+	margin-bottom: 15px;
+	max-width: 100%;
+	overflow: auto;
+	padding: 15px;
+}
+
+code,
+kbd,
+tt,
+var {
+	font-family: $text-font;
+	font-size: 15px;
+}
+
+abbr,
+acronym {
+	border-bottom: 1px dotted #666;
+	cursor: help;
+}
+
+mark,
+ins {
+	background: #fff9c0;
+	text-decoration: none;
+}
+
+big {
+	font-size: 125%;
+}
