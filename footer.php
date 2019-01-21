@@ -28,7 +28,7 @@
 							?>
 						</div>
 						<div class="col-6 col-sm-auto order-sm-3 text-sm-right col-md-auto order-md-2 align-self-sm-center xs-push-top"></div>
-						<div class="col-6 col-sm-auto col-md-auto order-sm-4 text-right text-sm-center align-self-sm-center const [propertyName] = arrayToDestruct;xs-push-top">
+						<div class="col-6 col-sm-auto col-md-auto order-sm-4 text-right text-sm-center align-self-sm-center">
 							<?php 
 								if ( function_exists( 'has_custom_logo' ) && has_custom_logo() ) :
 									the_custom_logo();

@@ -4,7 +4,6 @@
 
 
 input {
-
     &[type="button"],
     &[type="reset"],
     &[type="submit"] {
@@ -49,7 +48,6 @@ input {
     &[type="url"],
     &[type="password"],
     &[type="search"],
-    &[type="number"],
     &[type="tel"],
     &[type="range"],
     &[type="date"],
@@ -59,22 +57,39 @@ input {
     &[type="datetime"],
     &[type="datetime-local"],
     &[type="color"] {
-        color: #404040;
-        border: 1px solid #EEE;
-        transition: all 0.3s ease-in-out;
-        -moz-transition: all 0.3s ease-in-out;
-        -webkit-transition: all 0.3s ease-in-out;
-        vertical-align: top;
+        color: white;
+        width: 100%;
+        padding: 10px 35px;
+        border-radius: 25px;
+        @include font-size(18px);
+        border: 1px solid black;
+        line-height: 1;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        @include transition(all ease-out 0.3s);
     }
 }
 
 textarea {
     color: #404040;
-    border: 1px solid #EEE;
     transition: all 0.3s ease-in-out;
     -moz-transition: all 0.3s ease-in-out;
     -webkit-transition: all 0.3s ease-in-out;
     vertical-align: top;
+    border-radius: 25px;
+
+    &[type="comment"] {
+        color: white;
+        width: 100%;
+        padding: 10px 35px;
+        border-radius: 25px;
+        @include font-size(18px);
+        border: 1px solid black;
+        line-height: 1;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        @include transition(all ease-out 0.3s);
+    }
 }
 
 select {

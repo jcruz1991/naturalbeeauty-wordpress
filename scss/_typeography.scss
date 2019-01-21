@@ -11,27 +11,30 @@ textarea {
 	font-weight: 400;
 }
 
-button {
+button,
+.woocommerce a.button,
+.woocommerce div.product form.cart .button {
 	display: inline-block;
 	background: transparent;
-	border: 2px solid #BEAF8C;
-	padding: 10px 15px;
+	border: 1px solid #BEAF8C;
+	padding: 10px 25px;
 	font-family: $header-font;
 	font-weight: 700;
 	border-radius: 25px;
-	font-size: 13px;
+	@include font-size(14px);
 	line-height: 1;
 	text-transform: uppercase;
 	letter-spacing: 1px;
 	background-color: transparent;
-	transition: background-color 0.3s;
-	color: black;
-	@include transition(all ease 0.3s);
+	color: #0C0C0C;
+	@include transition(background-color ease-out 0.5s);
 
 	&:hover {
-		background: #333;
-		border: 2px solid #333;
-		color: white;
+		background: #BEAF8C;
+
+		a {
+			color: #FFFFFF;
+		}
 	}
 }
 
@@ -44,6 +47,7 @@ h6 {
 	margin: 0;
 	font-weight: 700;
 	line-height: 1.2;
+	letter-spacing: 1.5px;
 	font-family: $header-font;
 }
 

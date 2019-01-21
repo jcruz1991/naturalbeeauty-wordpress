@@ -42,7 +42,7 @@
 		font-family: $text-font;
 		font-weight: 400;
 		line-height: 36px;
-		padding: 30px 15px;
+		padding: 30px 0 30px 15px;
 		font-weight: 400;
 		@include transition(all ease-out 0.3s);
 	}
@@ -133,7 +133,7 @@
 .nb-main-navigation li:hover>a,
 .page-template-home-template .nb-main-navigation li:hover>a,
 .home.blog .nb-main-navigation li:hover>a {
-	color: yellow;
+	color: #e4764f;
 }
 
 .nb-main-navigation {
@@ -141,13 +141,13 @@
 	.current_page_item>a,
 	.current-menu-item>a,
 	.current_page_ancestor>a {
-		color: yellow;
+		color: #e4764f;
 	}
 }
 
 .page-template-home-template .nb-main-navigation .current>a,
 .home.blog .nb-main-navigation .current>a {
-	color: yellow;
+	color: #e4764f;
 }
 
 /* styling for both css and generated arrows */
@@ -205,5 +205,6 @@
 }
 
 .open {
-	top: 0 !important;
+	//transform: translateX(0%) !important;
+	@include transform(translateX(0%) !important);
 }
