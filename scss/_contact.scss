@@ -1,12 +1,5 @@
 div.wpforms-container-full .wpforms-form .wpforms-field {
     position: relative;
-    border: 1px solid #e6e6e6;
-    border-radius: 13px;
-    margin-bottom: 20px;
-    padding: 10px 30px 9px 22px;
-    background: #f7f7f7;
-    @include font-size(18px);
-    line-height: 1.2;
 }
 
 div.wpforms-container-full .wpforms-form input[type=date],
@@ -25,20 +18,14 @@ div.wpforms-container-full .wpforms-form input[type=url],
 div.wpforms-container-full .wpforms-form input[type=week],
 div.wpforms-container-full .wpforms-form select,
 div.wpforms-container-full .wpforms-form textarea {
-    background: transparent;
-    margin: 0;
-    padding: 0;
-    width: 100%;
-    border: none;
-    @include font-size(18px);
-    outline: none !important;
-    letter-spacing: 2px;
-    line-height: 1.2;
+    border: 1px solid #EEE;
+    color: #444;
+    padding: 8px 10px;
+    @include font-size(14px);
 }
 
 div.wpforms-container-full .wpforms-form textarea,
 div.wpforms-container-full .wpforms-form textarea:focus {
-    border: none;
     resize: none;
     outline: none !important;
 }
@@ -74,6 +61,7 @@ div.wpforms-container-full .wpforms-form select {
     height: 50px;
     margin: 0;
     padding: 0;
+    padding-left: 10px;
 }
 
 div.wpforms-container-full .wpforms-form input[type=submit],
@@ -85,13 +73,12 @@ div.wpforms-container-full .wpforms-form .wpforms-page-button {
     width: 100%;
     padding: 10px 35px;
     border-radius: 25px;
-    font-size: 18px;
+    @include font-size(18px);
     line-height: 1;
-    text-transform: uppercase;
     letter-spacing: 1px;
     @include transition(all ease-out 0.3s);
 
-    &:hover {
+    &:hover, &:focus {
         background: darken(#BEAF8C, 10);
     }
 }

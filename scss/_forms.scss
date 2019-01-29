@@ -57,39 +57,20 @@ input {
     &[type="datetime"],
     &[type="datetime-local"],
     &[type="color"] {
-        color: white;
         width: 100%;
-        padding: 10px 35px;
-        border-radius: 25px;
-        @include font-size(18px);
-        border: 1px solid black;
-        line-height: 1;
-        text-transform: uppercase;
-        letter-spacing: 1px;
+        padding: 3px 8px;
+        border: 1px solid #EEE;
+        @include font-size(16px);
+        height: 40px;
         @include transition(all ease-out 0.3s);
     }
 }
 
 textarea {
     color: #404040;
-    transition: all 0.3s ease-in-out;
-    -moz-transition: all 0.3s ease-in-out;
-    -webkit-transition: all 0.3s ease-in-out;
     vertical-align: top;
-    border-radius: 25px;
-
-    &[type="comment"] {
-        color: white;
-        width: 100%;
-        padding: 10px 35px;
-        border-radius: 25px;
-        @include font-size(18px);
-        border: 1px solid black;
-        line-height: 1;
-        text-transform: uppercase;
-        letter-spacing: 1px;
-        @include transition(all ease-out 0.3s);
-    }
+    resize: none;
+    @include transition(all ease-in-out 0.3s);
 }
 
 select {
@@ -99,9 +80,6 @@ select {
     background-color: transparent;
     line-height: 100%;
     outline: 0;
-    background-image: url("images/arrow.png");
-    background-position: right center;
-    background-repeat: no-repeat;
     position: relative;
     cursor: pointer;
     -webkit-appearance: none;

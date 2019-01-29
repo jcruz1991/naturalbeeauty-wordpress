@@ -4,11 +4,11 @@
 
 #nb-masthead {
     width: 100%;
-    position: absolute;
+    position: relative;
     top: 0;
     left: 0;
-    background: transparent;
-    height: 120px;
+    background: #FFF;
+    height: 90px;
     z-index: 99;
     @include transition(height ease-out 0.3s);
 }

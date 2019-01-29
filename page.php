@@ -16,7 +16,7 @@ get_header();
 ?>
 
 	<div id="primary page-primary" class="content-area">
-		<main id="main" class="site-main container" style="padding-top: 5%">
+		<main id="main" class="site-main container">
 			<?php
 			while ( have_posts() ) :
 				the_post();

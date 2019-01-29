@@ -13,24 +13,23 @@ textarea {
 
 button,
 .woocommerce a.button,
+.woocommerce button.button,
 .woocommerce div.product form.cart .button {
 	display: inline-block;
-	background: transparent;
-	border: 1px solid #BEAF8C;
-	padding: 10px 25px;
-	font-family: $header-font;
+	border: none;
+	padding: 10px 24px;
+	font-family: $text-font;
 	font-weight: 700;
-	border-radius: 25px;
+	border-radius: 40px;
 	@include font-size(14px);
 	line-height: 1;
-	text-transform: uppercase;
 	letter-spacing: 1px;
-	background-color: transparent;
 	color: #0C0C0C;
-	@include transition(background-color ease-out 0.5s);
+	@include transition(all ease-in 0.3s);
 
 	&:hover {
-		background: #BEAF8C;
+		background-color: #0C0C0C;
+		color: #FFFFFF;
 
 		a {
 			color: #FFFFFF;
@@ -45,7 +44,6 @@ h4,
 h5,
 h6 {
 	margin: 0;
-	font-weight: 700;
 	line-height: 1.2;
 	letter-spacing: 1.5px;
 	font-family: $header-font;

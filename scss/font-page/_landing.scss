@@ -1,6 +1,5 @@
-#primary,
 .font-primary {
-    background: #F6F3F1;
+    background: #F5F5F5;
 }
 
 .landing-hero {
@@ -8,23 +7,25 @@
     height: 100vh;
     position: relative;
 
-    .landing-content {
-        width: 100%;
-        height: 100%;
+    .landing-text-wrap {
+        display: table;
+        left: 16%;
+        bottom: 73%;
+        position: absolute;
 
-        .landing-text-content {
-            margin-top: 10%;
+        p {
+            @include font-size(12px);
+        }
 
-            h1 {
-                @include font-size(40px);
-                text-transform: uppercase;
-                padding-bottom: 16px;
-                letter-spacing: 4px;
+        button {
+            background: #333333;
+
+            a {
+                color: white;
             }
 
-            p {
-                @include font-size(20px);
-                padding-bottom: 16px;
+            &:hover {
+                background: darken(#333333, 5);
             }
         }
     }
@@ -35,6 +36,46 @@
     height: 100%;
     background: #FFFFFF;
     padding: 5% 0;
+
+    .image-container {
+        text-align: center;
+
+        img {
+            height: 500px;
+            width: auto;
+        }
+    }
+
+    .font-container {
+        @include flexbox();
+        @include flex-direction(column);
+        @include justify-content(center);
+        @include align-content(center);
+        width: 100%;
+        height: 100%;
+
+        button {
+            width: 140px;
+            background: lighten(#E07747, 5);
+            color: white;
+
+            &:hover,
+            &:focus {
+                background: darken(#E07747, 3);
+            }
+        }
+    }
+
+    .image {
+        width: 100%;
+        height: 600px;
+        background: gray;
+        cursor: pointer;
+
+        &:hover {
+            background-color: rgba(0,0,0,0.5);
+        }
+    }
 }
 
 @include mediaSm {
@@ -48,12 +89,15 @@
                     @include font-size(28px);
                     padding-bottom: 5px;
                 }
+
                 p {
                     @include font-size(12px);
                     line-height: 2.5;
                 }
 
                 button {
+                    background: #FFFFFF;
+
                     a {
                         @include font-size(10px);
                     }

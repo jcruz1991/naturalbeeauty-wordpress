@@ -167,10 +167,7 @@
 		position: absolute;
 		top: 50%;
 		right: 5px;
-		-webkit-transform: translateY(-50%);
-		-ms-transform: translateY(-50%);
-		transform: translateY(-50%);
-
+		@include transform(translateY(-50px));
 		&:after {
 			content: '\f105';
 		}
@@ -205,6 +202,6 @@
 }
 
 .open {
-	//transform: translateX(0%) !important;
-	@include transform(translateX(0%) !important);
+	//@include transform(translateX(0%) !important);
+	visibility: visible !important;
 }
