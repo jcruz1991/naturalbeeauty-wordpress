@@ -15,6 +15,21 @@
     .toggle-bar {
         display: block;
     }
+    .toggle {
+        @include animation(rotate-in-center 0.6s cubic-bezier(0.250, 0.460, 0.450, 0.940) both);
+        span {
+            @include transition(all ease-out 0.2s);
+            &:nth-child(1) {
+                @include transform(translate(-7px, 13px) rotate(-45deg));
+            }
+            &:nth-child(2) {
+                opacity: 0;
+            }
+            &:nth-child(3) {
+                @include transform(translate(-5px, -7px) rotate(45deg));
+            }
+        }
+    }
 
     .nb-main-navigation {
         ul {

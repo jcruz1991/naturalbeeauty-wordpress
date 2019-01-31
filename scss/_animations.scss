@@ -63,3 +63,21 @@
         opacity: 1;
     }
 }
+
+
+/**
+ * ----------------------------------------
+ * animation rotate-in-center
+ * ----------------------------------------
+ */
+@keyframes rotate-in-center {
+    0% {
+        @include transform(rotate(-360deg));
+        opacity: 0;
+    }
+
+    100% {
+        @include transform(rotate(0));
+        opacity: 1;
+    }
+}

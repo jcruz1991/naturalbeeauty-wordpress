@@ -5,7 +5,7 @@ $(document).ready(function () {
 
     // Toggle Nav
     toggleBar.addEventListener('click', () => {
-        console.log('clicked');
         nav.classList.toggle('nav-active');
+        toggleBar.classList.toggle('toggle');
     });
 });

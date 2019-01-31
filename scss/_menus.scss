@@ -207,11 +207,8 @@
 
 .nav-active {
 	@include transform(translateX(0%) !important);
-}
 
-//for loop here
-@for $i from 1 to 6 {
-	.nav-active {
+	@for $i from 1 to 6 {
 		li:nth-child(#{$i}) {
 			@include animation(slide-in-right $i * 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both);
 		}
