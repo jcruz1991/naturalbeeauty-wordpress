@@ -3,6 +3,12 @@
     @include animation(fade-in 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) both);
 }
 
+@for $i from 1 to 5 {
+    .nav-fade-in:nth-child(#{$i}) {
+        @include animation(nav-fade-in 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) both);
+    }
+}
+
 
 /**
  * ----------------------------------------
@@ -16,6 +22,44 @@
     }
 
     100% {
+        opacity: 1;
+    }
+}
+
+/**
+ * ----------------------------------------
+ * animation fade-in with transform
+ * ----------------------------------------
+ */
+
+@include keyframes(nav-fade-in) {
+    0% {
+        opacity: 0;
+        @include transform(translateX(50px));
+    }
+
+    100% {
+        opacity: 1 !important;
+        @include transform(translateX(0px));
+    }
+}
+
+/**
+ * ----------------------------------------
+ * animation slide-in-right
+ * ----------------------------------------
+ */
+
+@include keyframes(slide-in-right) {
+    0% {
+        -webkit-transform: translateX(1000px);
+        transform: translateX(1000px);
+        opacity: 0;
+    }
+
+    100% {
+        -webkit-transform: translateX(0);
+        transform: translateX(0);
         opacity: 1;
     }
 }

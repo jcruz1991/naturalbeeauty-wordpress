@@ -39,7 +39,6 @@
 			</div><!-- .site-branding -->
 
 			<nav id="nb-site-navigation" class="nb-main-navigation">
-				<div class="toggle-bar"><span></span></div>
 				<?php 
 				wp_nav_menu( array( 
 					'theme_location' => 'menu-1',
@@ -49,6 +48,11 @@
 				) ); 
 				?>
 			</nav><!-- #nb-site-navigation -->
+				<div class="toggle-bar">
+					<span></span>
+					<span></span>
+					<span></span>
+				</div>
 		</div>
 	</header><!-- #nb-masthead -->
 

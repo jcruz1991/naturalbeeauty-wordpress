@@ -5,12 +5,23 @@
 #nb-masthead {
     width: 100%;
     position: relative;
-    top: 0;
-    left: 0;
     background: #FFF;
     height: 90px;
-    z-index: 99;
+    z-index: 999;
     @include transition(height ease-out 0.3s);
+
+    .nb-container {
+        @include flexbox();
+        @include justify-content(space-between);
+        @include align-items(center);
+        height: 100%;
+
+        #nb-site-branding {
+            img {
+                width: 90px;
+            }
+        }
+    }
 }
 
 .blog.home #nb-masthead {
@@ -41,23 +52,6 @@
     padding-top: 134px;
 }
 
-#nb-site-branding {
-    float: left;
-    width: 30%;
-    padding: 15px 0;
-    transition: padding 0.3s ease;
-    -moz-transition: padding 0.3s ease;
-    -webkit-transition: padding 0.3s ease;
-}
-
-.nb-sticky #nb-site-branding {
-    padding: 5px 0;
-}
-
-#nb-site-branding img {
-    max-height: 110px;
-    width: auto;
-}
 
 .nb-main-header {
     background: #f9f9f9;

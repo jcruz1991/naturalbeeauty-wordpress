@@ -11,25 +11,24 @@
 }
 
 @include mediaSm {
+
     .toggle-bar {
         display: block;
-        position: absolute;
-        top: 30px;
-        right: 20px;
-        height: 50px;
-        width: 50px;
-        cursor: pointer;
-        z-index: 999;
+    }
 
-        span {
+    .nb-main-navigation {
+        ul {
             position: absolute;
-            top: 50%;
-            margin-top: -2px;
-            height: 4px;
-            left: 8px;
-            right: 8px;
-            background: #191919;
-            box-shadow: 0 10px 0 0 #191919, 0 -10px 0 0 #191919;
+            right: 0;
+            height: 100vh;
+            width: 50%;
+            top: 90px;
+            background: #FFF;
+            @include flexbox();
+            @include flex-direction(column);
+            @include align-items(center);
+            @include transform(translateX(100%));
+            @include transition(all ease-in 0.5s);
         }
     }
 
@@ -42,13 +41,11 @@
     }
 
     #nb-site-navigation {
-        width: 20%;
+        margin: 0;
+        margin-left: auto;
     }
 
     #nb-site-branding {
-        width: 80%;
-        float: left;
-
         img {
             width: 80px;
         }
@@ -62,37 +59,6 @@
         padding-top: 0;
     }
 
-    .nb-main-navigation {
-        .nb-menu {
-            display: block;
-            width: 100%;
-            height: 100vh;
-            padding-top: 10%;
-            padding-right: 2%;
-            overflow-y: hidden;
-            position: absolute;
-            right: 0;
-            top: 0%;
-            //@include transform(translateX(110%));
-            background: #FFFFFF;
-            z-index: 998;
-            visibility: hidden;
-            @include transition(all ease-in 0.3s);
-        }
-
-        li {
-            float: none;
-            margin-left: 0;
-            text-align: right;
-            @include transition(all ease-in 0.3s);
-        }
-
-        a,
-        ul ul a {
-            line-height: 1.3;
-            padding: 15px 20px;
-        }
-    }
 
     .page-template-home-template .nb-main-navigation {
 
@@ -112,22 +78,6 @@
         }
     }
 
-    .nb-main-navigation {
-        a {
-            color: #58585B;
-        }
-
-        ul ul {
-            position: static;
-            padding: 0;
-            margin-top: 0;
-            box-shadow: none;
-
-            ul {
-                margin: 0;
-            }
-        }
-    }
 
     .menu-item-has-children {
 
@@ -162,9 +112,10 @@
         li:hover>ul {
             display: none;
         }
-        padding-top: 20%;
+
         ul {
             background: none;
+
             a {
                 color: #58585B;
             }
@@ -377,7 +328,7 @@
     }
 }
 
-@include mediaSm{
+@include mediaSm {
 
     .nb-blog-post,
     .nb-featured-post {
