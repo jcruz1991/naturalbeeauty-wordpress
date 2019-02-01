@@ -195,3 +195,36 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 remove_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_meta', 40 );
 remove_action( 'woocommerce_after_single_product_summary', 'woocommerce_upsell_display', 15 );
 remove_action( 'woocommerce_after_single_product_summary', 'woocommerce_output_related_products', 20 );
+
+
+
+//Append cart item (and cart count) to end of main menu.
+add_filter( 'wp_nav_menu_main-menu_items', 'am_append_cart_icon', 10, 2 );
+function am_append_cart_icon( $items, $args ) {
+	// get current cart items count
+	$cart_item_count = WC()->cart->get_cart_contents_count();
+	$cart_count_span = '';
+
+	// if their is cart items count add the count to the span
+	if ( $cart_item_count ) {
+		$cart_count_span = '<span class="count">'.$cart_item_count.'</span>';
+	}
+	// link output that is appended to the top menu
+	$cart_link = '
+		<li class="cart menu-item menu-item-type-post_type menu-item-object-page">
+			<div class="cart-menu">
+				<a href="' . get_permalink( wc_get_page_id( 'cart' ) ) . '">
+				'.$cart_count_span.'
+				<img width=22 src="./wp-content/themes/naturalbeeauty/images/shopping-bag.svg"/>
+				</a>
+			</div>
+		</li>';
+	// Add the cart link to the end of the menu.
+	$items = $items . $cart_link;
+	return $items;
+}
+
+
+
+
+
