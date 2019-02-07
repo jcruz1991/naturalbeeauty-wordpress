@@ -22,7 +22,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 ?>
 <div class="cart_totals <?php echo ( WC()->customer->has_calculated_shipping() ) ? 'calculated_shipping' : ''; ?>">
-
+	<div class="cart-summary"><h5>Order Summary<h5></div>
 	<?php do_action( 'woocommerce_before_cart_totals' ); ?>
 
 	<table cellspacing="0" class="shop_table shop_table_responsive">

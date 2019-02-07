@@ -16,7 +16,7 @@
 <footer id="nb-colophon" class="nb-site-footer">
 	<div class="fluid-container">
 		<div class="row">
-			<div class="col-sm-12 col-md-8 footer-menu">
+			<div class="col-sm-12 col-md-8 footer-menu text-sm-center text-md-left">
 			<?php 
 					wp_nav_menu( array( 
 						'theme_location' => 'menu-2',

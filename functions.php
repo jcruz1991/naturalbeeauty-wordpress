@@ -204,18 +204,17 @@ function am_append_cart_icon( $items, $args ) {
 	// get current cart items count
 	$cart_item_count = WC()->cart->get_cart_contents_count();
 	$cart_count_span = '';
-
 	// if their is cart items count add the count to the span
 	if ( $cart_item_count ) {
-		$cart_count_span = '<span class="count">'.$cart_item_count.'</span>';
+		$cart_count_span = '<span class="count">'.$cart_item_count.'</span>'; // create span tag
 	}
 	// link output that is appended to the top menu
 	$cart_link = '
 		<li class="cart menu-item menu-item-type-post_type menu-item-object-page">
 			<div class="cart-menu">
 				<a href="' . get_permalink( wc_get_page_id( 'cart' ) ) . '">
+				<img width=22 src="https://res.cloudinary.com/dd67kwah2/image/upload/v1549307411/shopping-bag_hrkog6.svg"/>
 				'.$cart_count_span.'
-				<img width=22 src="./wp-content/themes/naturalbeeauty/images/shopping-bag.svg"/>
 				</a>
 			</div>
 		</li>';
@@ -227,4 +226,19 @@ function am_append_cart_icon( $items, $args ) {
 
 
 
-
+function custom_mini_cart() {
+	echo '<a href="#" class="dropdown-back" data-toggle="dropdown"> ';
+		echo '<i class="fa fa-shopping-cart" aria-hidden="true"></i>';
+		echo '<div class="basket-item-count" style="display: inline;">';
+			echo '<span class="cart-items-count count">';
+				echo WC()->cart->get_cart_contents_count();
+			echo '</span>';
+		echo '</div>';
+	echo '</a>';
+	echo '<ul class="dropdown-menu dropdown-menu-mini-cart">';
+			echo '<li> <div class="widget_shopping_cart_content">';
+					  woocommerce_mini_cart();
+				echo '</div></li></ul>';
+	
+}
+add_shortcode( 'nachtleven-mini-cart', 'custom_mini_cart' );
