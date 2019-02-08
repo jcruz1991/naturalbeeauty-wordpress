@@ -194,8 +194,7 @@
 #add_payment_method table.cart td.actions .coupon .input-text,
 .woocommerce-cart table.cart td.actions .coupon .input-text,
 .woocommerce-checkout table.cart td.actions .coupon .input-text {
-    width: 150px;
-    text-align: center;
+    width: 116px;
 }
 
 .woocommerce .cart-collaterals .cart_totals,
@@ -207,15 +206,30 @@
     width: auto;
 }
 
-.woocommerce #content table.cart td.actions, .woocommerce table.cart td.actions, .woocommerce-page #content table.cart td.actions, .woocommerce-page table.cart td.actions {
+.woocommerce #content table.cart td.actions,
+.woocommerce table.cart td.actions,
+.woocommerce-page #content table.cart td.actions,
+.woocommerce-page table.cart td.actions {
     padding-top: 24px;
     border-top: 1px solid silver;
 }
 
 .woocommerce table.shop_table {
     padding: 20px 0;
+
     td {
         border: none;
+    }
+}
+
+.coupon-button {
+    border: none !important;
+    border-radius: 0 !important;
+    background: 0 !important;
+    margin-top: 2px !important;
+
+    &:hover{
+        color: darken(#0C0C0C, 10) !important;
     }
 }
 
@@ -224,7 +238,9 @@
 }
 
 .order-total {
-    th, td {
+
+    th,
+    td {
         border-top: 3px solid black !important;
     }
 
@@ -236,6 +252,7 @@
 .woocommerce table.shop_table td {
     padding: 24px 12px;
 }
+
 .woocommerce a.remove {
     font-size: 1.7em;
     height: 2em;
@@ -247,9 +264,10 @@
 
     &:hover {
         background: none;
-        color: black !important; 
+        color: black !important;
     }
 }
+
 thead {
     .table-header {
         th {
@@ -258,16 +276,23 @@ thead {
     }
 }
 
-#add_payment_method .cart-collaterals .cart_totals tr td, #add_payment_method .cart-collaterals .cart_totals tr th, .woocommerce-cart .cart-collaterals .cart_totals tr td, .woocommerce-cart .cart-collaterals .cart_totals tr th, .woocommerce-checkout .cart-collaterals .cart_totals tr td, .woocommerce-checkout .cart-collaterals .cart_totals tr th {
+#add_payment_method .cart-collaterals .cart_totals tr td,
+#add_payment_method .cart-collaterals .cart_totals tr th,
+.woocommerce-cart .cart-collaterals .cart_totals tr td,
+.woocommerce-cart .cart-collaterals .cart_totals tr th,
+.woocommerce-checkout .cart-collaterals .cart_totals tr td,
+.woocommerce-checkout .cart-collaterals .cart_totals tr th {
     border: none;
 }
 
 .woocommerce-cart-form,
 .shop_table {
+
     thead,
     tbody {
         tr {
             padding: 20px 0;
+
             th {
                 font-family: $header-font;
                 letter-spacing: 1px;
@@ -294,8 +319,9 @@ thead {
     }
 }
 
-.product-remove, .product-thumbnail {
-    padding: 0;
+.product-remove,
+.product-thumbnail {
+    padding: 0 !important;
 }
 
 /*****************************************
@@ -335,6 +361,7 @@ thead {
 
 .woocommerce table.shop_table {
     border: none;
+
     tfoot {
         tr {
             th {
@@ -344,7 +371,9 @@ thead {
     }
 }
 
-.woocommerce table.shop_table tbody th, .woocommerce table.shop_table tfoot td, .woocommerce table.shop_table tfoot th {
+.woocommerce table.shop_table tbody th,
+.woocommerce table.shop_table tfoot td,
+.woocommerce table.shop_table tfoot th {
     font-weight: initial;
     border: none;
 }

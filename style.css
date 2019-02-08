@@ -1763,8 +1763,7 @@ div.wpforms-container-full .wpforms-form .wpforms-page-button {
 #add_payment_method table.cart td.actions .coupon .input-text,
 .woocommerce-cart table.cart td.actions .coupon .input-text,
 .woocommerce-checkout table.cart td.actions .coupon .input-text {
-  width: 150px;
-  text-align: center; }
+  width: 116px; }
 
 .woocommerce .cart-collaterals .cart_totals,
 .woocommerce-page .cart-collaterals .cart_totals {
@@ -1781,7 +1780,10 @@ div.wpforms-container-full .wpforms-form .wpforms-page-button {
   height: 100%;
   width: auto; }
 
-.woocommerce #content table.cart td.actions, .woocommerce table.cart td.actions, .woocommerce-page #content table.cart td.actions, .woocommerce-page table.cart td.actions {
+.woocommerce #content table.cart td.actions,
+.woocommerce table.cart td.actions,
+.woocommerce-page #content table.cart td.actions,
+.woocommerce-page table.cart td.actions {
   padding-top: 24px;
   border-top: 1px solid silver; }
 
@@ -1790,10 +1792,19 @@ div.wpforms-container-full .wpforms-form .wpforms-page-button {
   .woocommerce table.shop_table td {
     border: none; }
 
+.coupon-button {
+  border: none !important;
+  border-radius: 0 !important;
+  background: 0 !important;
+  margin-top: 2px !important; }
+  .coupon-button:hover {
+    color: black !important; }
+
 .cart-summary {
   border-bottom: 1px solid black; }
 
-.order-total th, .order-total td {
+.order-total th,
+.order-total td {
   border-top: 3px solid black !important; }
 
 .order-total td {
@@ -1817,7 +1828,12 @@ div.wpforms-container-full .wpforms-form .wpforms-page-button {
 thead .table-header th {
   border-bottom: 1px solid #979797; }
 
-#add_payment_method .cart-collaterals .cart_totals tr td, #add_payment_method .cart-collaterals .cart_totals tr th, .woocommerce-cart .cart-collaterals .cart_totals tr td, .woocommerce-cart .cart-collaterals .cart_totals tr th, .woocommerce-checkout .cart-collaterals .cart_totals tr td, .woocommerce-checkout .cart-collaterals .cart_totals tr th {
+#add_payment_method .cart-collaterals .cart_totals tr td,
+#add_payment_method .cart-collaterals .cart_totals tr th,
+.woocommerce-cart .cart-collaterals .cart_totals tr td,
+.woocommerce-cart .cart-collaterals .cart_totals tr th,
+.woocommerce-checkout .cart-collaterals .cart_totals tr td,
+.woocommerce-checkout .cart-collaterals .cart_totals tr th {
   border: none; }
 
 .woocommerce-cart-form thead tr,
@@ -1848,8 +1864,9 @@ thead .table-header th {
   .woocommerce input.button.alt:hover {
     background-color: #dc6731; }
 
-.product-remove, .product-thumbnail {
-  padding: 0; }
+.product-remove,
+.product-thumbnail {
+  padding: 0 !important; }
 
 /*****************************************
 *
@@ -1882,7 +1899,9 @@ thead .table-header th {
   .woocommerce table.shop_table tfoot tr th {
     font-family: "Cinzel", serif; }
 
-.woocommerce table.shop_table tbody th, .woocommerce table.shop_table tfoot td, .woocommerce table.shop_table tfoot th {
+.woocommerce table.shop_table tbody th,
+.woocommerce table.shop_table tfoot td,
+.woocommerce table.shop_table tfoot th {
   font-weight: initial;
   border: none; }
 
