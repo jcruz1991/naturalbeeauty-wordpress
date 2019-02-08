@@ -1848,6 +1848,9 @@ thead .table-header th {
   .woocommerce input.button.alt:hover {
     background-color: #dc6731; }
 
+.product-remove, .product-thumbnail {
+  padding: 0; }
+
 /*****************************************
 *
 *  Payment form page
@@ -1880,6 +1883,7 @@ thead .table-header th {
     font-family: "Cinzel", serif; }
 
 .woocommerce table.shop_table tbody th, .woocommerce table.shop_table tfoot td, .woocommerce table.shop_table tfoot th {
+  font-weight: initial;
   border: none; }
 
 .woocommerce-billing-fields h3 {
