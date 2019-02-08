@@ -228,7 +228,7 @@
     background: 0 !important;
     margin-top: 2px !important;
 
-    &:hover{
+    &:hover {
         color: darken(#0C0C0C, 10) !important;
     }
 }
@@ -460,4 +460,16 @@ thead {
     top: .780em;
     right: 0.3em;
     @include animation(spin 2s linear infinite);
+}
+
+
+/*****************************************
+*
+*  Login/Register Form
+*
+*****************************************/
+.woocommerce form.checkout_coupon,
+.woocommerce form.login,
+.woocommerce form.register {
+    border: none;
 }

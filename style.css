@@ -265,7 +265,8 @@ html {
   -webkit-text-size-adjust: 100%;
   -ms-text-size-adjust: 100%; }
 
-html, body {
+html,
+body {
   overflow-x: hidden; }
 
 body {
@@ -412,7 +413,6 @@ input {
       -webkit-appearance: none; }
 
 fieldset {
-  border: 1px solid #c0c0c0;
   margin: 0 2px;
   padding: 0.35em 0.625em 0.75em; }
 
@@ -1974,6 +1974,16 @@ thead .table-header th {
   -ms-animation: spin 2s linear infinite;
   -o-animation: spin 2s linear infinite;
   animation: spin 2s linear infinite; }
+
+/*****************************************
+*
+*  Login/Register Form
+*
+*****************************************/
+.woocommerce form.checkout_coupon,
+.woocommerce form.login,
+.woocommerce form.register {
+  border: none; }
 
 /*--------------------------------------------------------------
 ## Footer
