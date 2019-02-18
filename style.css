@@ -956,8 +956,8 @@ a {
   text-decoration: none;
   color: #444;
   text-transform: lowercase;
-  font-size: 18px;
-  font-size: 1.125rem;
+  font-size: 16px;
+  font-size: 1rem;
   font-family: "Raleway", sans-serif;
   font-weight: 400;
   line-height: 36px;
@@ -1752,8 +1752,11 @@ div.wpforms-container-full .wpforms-form .wpforms-page-button {
     display: inline-block;
     margin: 0;
     padding: 0 1%;
-    border: 0;
-    width: 50%; }
+    border: 0; }
+  .cart-container .woocommer-cart-form {
+    width: 60%; }
+  .cart-container .cart-collaterals {
+    width: 40%; }
 
 @media screen and (max-width: 39.9375em) {
   .cart-container .woocommerce-cart-form,

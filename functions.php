@@ -217,7 +217,7 @@ function add_user_login_logout_nav_menu($items, $args) {
 		$items .= '
 		<li class="menu-item menu-item-type-post_type menu-item-object-page">
 			<a href="' . get_permalink( wc_get_page_id( 'my-account' ) ) . '">
-				Sign In
+				Sign in
 			</a>
 		</li>';
 	}
