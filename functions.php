@@ -196,6 +196,33 @@ remove_action( 'woocommerce_single_product_summary', 'woocommerce_template_singl
 remove_action( 'woocommerce_after_single_product_summary', 'woocommerce_upsell_display', 15 );
 remove_action( 'woocommerce_after_single_product_summary', 'woocommerce_output_related_products', 20 );
 
+/**
+ * 
+ * Add Login and Logout to top menu
+ */
+
+add_filter( 'wp_nav_menu_main-menu_items', 'add_user_login_logout_nav_menu', 10, 2 );
+function add_user_login_logout_nav_menu($items, $args) {
+	// check is user is logged in
+	// is logged in appened logout button to top nav else appent login to nav
+	// .= is Concatenation assignment
+	if(is_user_logged_in()) {
+		$items .= '
+			<li class="menu-item menu-item-type-post_type menu-item-object-page">
+				<a href="' . get_permalink( wc_get_page_id( 'my-account' ) ) . '">
+					My Account
+				</a>
+			</li>';
+	} else {
+		$items .= '
+		<li class="menu-item menu-item-type-post_type menu-item-object-page">
+			<a href="' . get_permalink( wc_get_page_id( 'my-account' ) ) . '">
+				Sign In
+			</a>
+		</li>';
+	}
+	return $items;
+}
 
 
 //Append cart item (and cart count) to end of main menu.
@@ -222,23 +249,3 @@ function am_append_cart_icon( $items, $args ) {
 	$items = $items . $cart_link;
 	return $items;
 }
-
-
-
-
-function custom_mini_cart() {
-	echo '<a href="#" class="dropdown-back" data-toggle="dropdown"> ';
-		echo '<i class="fa fa-shopping-cart" aria-hidden="true"></i>';
-		echo '<div class="basket-item-count" style="display: inline;">';
-			echo '<span class="cart-items-count count">';
-				echo WC()->cart->get_cart_contents_count();
-			echo '</span>';
-		echo '</div>';
-	echo '</a>';
-	echo '<ul class="dropdown-menu dropdown-menu-mini-cart">';
-			echo '<li> <div class="widget_shopping_cart_content">';
-					  woocommerce_mini_cart();
-				echo '</div></li></ul>';
-	
-}
-add_shortcode( 'nachtleven-mini-cart', 'custom_mini_cart' );
