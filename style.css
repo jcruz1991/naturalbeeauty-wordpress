@@ -1988,6 +1988,22 @@ thead .table-header th {
 .woocommerce form.register {
   border: none; }
 
+.woocommerce form .form-row label,
+.woocommerce-page form .form-row label {
+  width: 100%; }
+
+#wc-login-button,
+#wc-register-button {
+  color: white;
+  background: #444444; }
+  #wc-login-button:hover,
+  #wc-register-button:hover {
+    background: #373737; }
+
+.woocommerce-privacy-policy-text p {
+  font-size: 12px;
+  font-size: 0.75rem; }
+
 /*--------------------------------------------------------------
 ## Footer
 --------------------------------------------------------------*/

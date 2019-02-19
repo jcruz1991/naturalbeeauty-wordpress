@@ -209,16 +209,12 @@ function add_user_login_logout_nav_menu($items, $args) {
 	if(is_user_logged_in()) {
 		$items .= '
 			<li class="menu-item menu-item-type-post_type menu-item-object-page">
-				<a href="' . get_permalink( wc_get_page_id( 'my-account' ) ) . '">
-					My Account
-				</a>
+				<a href="' . get_permalink( get_option( 'woocommerce_myaccount_page_id' ) ) . '">My Account</a>
 			</li>';
 	} else {
 		$items .= '
 		<li class="menu-item menu-item-type-post_type menu-item-object-page">
-			<a href="' . get_permalink( wc_get_page_id( 'my-account' ) ) . '">
-				Sign in
-			</a>
+			<a href="' . get_permalink( get_option( 'woocommerce_myaccount_page_id' ) ) . '">Sign in</a>
 		</li>';
 	}
 	return $items;

@@ -480,3 +480,24 @@ thead {
 .woocommerce form.register {
     border: none;
 }
+
+.woocommerce form .form-row label,
+.woocommerce-page form .form-row label {
+    width: 100%;
+}
+
+#wc-login-button,
+#wc-register-button {
+    color: white;
+    background:#444444;
+
+    &:hover {
+        background: #373737;
+    }
+}
+
+.woocommerce-privacy-policy-text {
+    p {
+        @include font-size(12px);
+    }
+}
