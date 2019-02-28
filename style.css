@@ -1752,7 +1752,9 @@ div.wpforms-container-full .wpforms-form .wpforms-page-button {
       .front-section .front-card-container .custom-card {
         display: none; }
       .front-section .front-card-container .benefits-text {
-        width: 100%; } }
+        width: 100%; }
+    .front-section .faq-box {
+      height: 320px; } }
 
 /*****************************************
 *
