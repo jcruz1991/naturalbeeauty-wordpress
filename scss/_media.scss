@@ -35,9 +35,9 @@
         ul {
             position: absolute;
             right: 0;
-            height: 100vh;
+            height: 110vh;
             width: 50%;
-            top: 90px;
+            top: 120px;
             margin-top: -98px;
             background: #FFF;
             @include transform(translateX(110%));
