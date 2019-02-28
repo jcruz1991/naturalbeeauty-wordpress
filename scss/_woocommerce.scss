@@ -42,21 +42,21 @@
 .woocommerce ul.products li.product .button,
 .woocommerce div.product form.cart .button {
     color: #FFFFFF;
-    background: #444444;
-    border: 1px solid #444444;
+    background: $light-black;
+    border: 1px solid $light-black;
     @include font-size(14px);
     padding: 10px 20px;
 
     &:hover {
-        background: darken(#444444, 5);
-        border: 1px solid darken(#444444, 5);
+        background: darken($light-black, 5);
+        border: 1px solid darken($light-black, 5);
     }
 }
 
 
 .woocommerce span.onsale {
     // background-color: #FFC107;
-    background: #E07747;
+    background: $dark-gold;
     color: #FFFFFF;
     @include font-size(14px);
     font-weight: 400;
@@ -72,7 +72,7 @@
 }
 
 .woocommerce span.onsale:after {
-    border-color: transparent #E07747 #E07747 transparent;
+    border-color: transparent $dark-gold $dark-gold transparent;
     border-width: 2px;
     border-style: solid;
     content: "";
@@ -86,7 +86,7 @@
 }
 
 .woocommerce ul.products li.product .onsale:after {
-    border-color: transparent transparent #E07747 #E07747;
+    border-color: transparent transparent $dark-gold $dark-gold;
     border-width: 3px;
     border-style: solid;
     right: 0px;
@@ -129,7 +129,7 @@
 
 .woocommerce div.product .woocommerce-tabs ul.tabs li {
     border: 0;
-    background-color: #FFFFFF;
+    background-color: inherit;
     border-radius: 0;
     margin: 0;
     padding: 0 20px;
@@ -137,7 +137,7 @@
 }
 
 .woocommerce div.product .woocommerce-tabs ul.tabs li.active {
-    background: white;
+    background: inherit;
     border-bottom: 1px solid #77A464;
 }
 
@@ -146,8 +146,13 @@
 }
 
 .woocommerce div.product .woocommerce-tabs .panel {
-    background: white;
+    background: inherit;
     padding: 50px;
+}
+
+.single_add_to_cart_button .button .alt {
+    width: 100%;
+    margin-top: 5%;
 }
 
 /*****************************************
@@ -187,6 +192,12 @@
         width: 40%;
     }
 }
+.woocommerce-Price-amount .amount {
+    font-weight: 700;
+    .woocommerce-Price-currencySymbol {
+        font-weight: 700;
+    }
+}
 
 @include mediaSm {
     .cart-container {
@@ -202,6 +213,7 @@
 .woocommerce-cart table.cart td.actions .coupon .input-text,
 .woocommerce-checkout table.cart td.actions .coupon .input-text {
     width: 116px;
+
 }
 
 .woocommerce .cart-collaterals .cart_totals,
@@ -319,11 +331,17 @@ thead {
 .woocommerce a.button.alt,
 .woocommerce button.button.alt,
 .woocommerce input.button.alt {
-    background-color: #E07747;
+    background-color: $dark-gold;
 
     &:hover {
-        background-color: darken(#E07747, 5);
+        background-color: darken($dark-gold, 5);
     }
+}
+
+.woocommerce .quantity .qty,
+.woocommerce-cart table.cart td.actions .coupon .input-text {
+    background: transparent;
+    border: 1px solid #979797;
 }
 
 .product-remove,
@@ -348,7 +366,7 @@ thead {
 
 .select2-container--default .select2-results__option--highlighted[aria-selected],
 .select2-container--default .select2-results__option--highlighted[data-selected] {
-    background-color: #E07747;
+    background-color: $dark-gold;
     color: #fff;
 }
 
@@ -358,10 +376,10 @@ thead {
 }
 
 .woocommerce-info {
-    border-top-color: #E07747;
+    border-top-color: $dark-gold;
 
     &::before {
-        color: #E07747;
+        color: $dark-gold;
     }
 }
 
@@ -405,14 +423,14 @@ thead {
 .woocommerce-error,
 .woocommerce-info,
 .woocommerce-message {
-    border-top-color: #E07747;
+    border-top-color: $dark-gold;
     font-size: 0.9em;
 }
 
 .woocommerce-error:before,
 .woocommerce-info:before,
 .woocommerce-message:before {
-    color: #E07747;
+    color: $dark-gold;
 }
 
 .woocommerce-error a.button,
@@ -431,7 +449,7 @@ thead {
 
         .count {
             @include font-size(10px);
-            background: #E07747;
+            background: $dark-gold;
             border-radius: 16px;
             color: white;
             position: absolute;
@@ -489,10 +507,10 @@ thead {
 #wc-login-button,
 #wc-register-button {
     color: white;
-    background:#444444;
+    background: $light-black;
 
     &:hover {
-        background: #373737;
+        background: darken($light-black, 5);
     }
 }
 

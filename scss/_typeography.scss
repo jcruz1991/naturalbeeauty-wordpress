@@ -5,7 +5,7 @@ body,
 input,
 select,
 textarea {
-	color: #444;
+	color: $light-black;
 	line-height: 1.6;
 	font-family: $text-font;
 	font-weight: 400;
@@ -24,11 +24,11 @@ button,
 	@include font-size(14px);
 	line-height: 1;
 	letter-spacing: 1px;
-	color: #0C0C0C;
+	color: $black;
 	@include transition(all ease-in 0.3s);
 
 	&:hover {
-		background-color: #0C0C0C;
+		background-color: $black;
 		color: #FFFFFF;
 
 		a {
@@ -82,6 +82,9 @@ h6 {
 p {
 	margin: 0 0 15px;
 	line-height: 36px;
+}
+
+p, span {
 	font-weight: 300;
 }
 
@@ -127,7 +130,7 @@ acronym {
 
 mark,
 ins {
-	background: #fff9c0;
+	background: $gold;
 	text-decoration: none;
 }
 

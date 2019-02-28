@@ -7,7 +7,7 @@ input {
     &[type="button"],
     &[type="reset"],
     &[type="submit"] {
-        background: #FFC107;
+        background: $dark-gold;
         padding: 0 20px;
         height: 40px;
         color: #FFF;

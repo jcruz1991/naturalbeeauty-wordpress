@@ -40,11 +40,10 @@
             top: 90px;
             margin-top: -98px;
             background: #FFF;
-            @include flexbox();
-            @include flex-direction(column);
-            @include align-items(center);
             @include transform(translateX(110%));
             @include transition(all ease-in 0.5s);
+            @include flex-direction(column);
+            @include align-items(center);
             box-shadow: -9px 38px 35px -1px rgba(204,204,204,1);
         }
     }
@@ -82,7 +81,7 @@
         .current_page_item>a,
         .current-menu-item>a,
         .current_page_ancestor>a {
-            color: #58585B;
+            color: $light-black;
         }
     }
 
@@ -91,7 +90,7 @@
         .current_page_item>a,
         .current-menu-item>a,
         .current_page_ancestor>a {
-            color: #58585B;
+            color: $light-black;
         }
     }
 
@@ -134,7 +133,7 @@
             background: none;
 
             a {
-                color: #58585B;
+                color: $light-black;
             }
         }
     }

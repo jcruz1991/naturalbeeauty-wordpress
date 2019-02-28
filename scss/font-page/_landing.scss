@@ -2,30 +2,74 @@
     background: #F5F5F5;
 }
 
+.divider-wrapper {
+    position: relative;
+    .divider {
+        position: absolute;
+        left: 50%;
+        @include transform(translateX(-50%));
+        width: 50%;
+        border: 0.5px solid silver;
+    }
+}
+
 .landing-hero {
+    background: url('http://localhost:8888/wordpress/wp-content/uploads/2019/02/DSC7562-cropped.jpg');
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
     width: 100%;
     height: 100vh;
     position: relative;
 
     .landing-text-wrap {
-        display: table;
-        left: 16%;
-        bottom: 73%;
         position: absolute;
+        width: 100%;
+        margin: auto;
+        top: 50%;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        transform: translateY(-50%);
 
+        h1,
         p {
-            @include font-size(12px);
+            width: 50%;
         }
 
+        h1,
+        p,
         button {
-            background: #333333;
+            margin-left: 8%;
+        }
+
+        h1 {
+            @include font-size(40px);
+            font-weight: 700;
+            letter-spacing: 1px;
+            line-height: 54px;
+            color: white;
+        }
+
+        p {
+            color: whitesmoke;
+            width: 35%;
+            @include font-size(20px);
+        }
+
+        
+        button {
+            width: 150px;
+            height: 45px;
+            background: $dark-gold;
 
             a {
                 color: white;
             }
 
-            &:hover {
-                background: darken(#333333, 5);
+            &:hover,
+            &:focus {
+                background: darken($dark-gold, 5);
             }
         }
     }
@@ -34,76 +78,174 @@
 .front-section {
     width: 100%;
     height: 100%;
-    background: #FFFFFF;
-    padding: 5% 0;
+    padding: 10% 0;
+    background: whitesmoke;
 
-    .image-container {
-        text-align: center;
+    .front-card-container {
+        display: grid;
+        grid-template-columns: 60% 1fr;
+        grid-template-rows: 1fr;
+        grid-template-areas: "cards benefits";
 
-        img {
-            height: 500px;
-            width: auto;
+        .custom-card,
+        .benefits-text {
+            display: inline-block;
         }
-    }
 
-    .font-container {
-        @include flexbox();
-        @include flex-direction(column);
-        @include justify-content(center);
-        @include align-content(center);
-        width: 100%;
-        height: 100%;
+        .benefits-text {
+            grid-area: benefits;
+            width: 100%;
+            padding: 0% 5%;
+            p {
+                :nth-child(1) {
+                    @include font-size(12px);
+                }
+            }
 
-        button {
-            width: 140px;
-            background: lighten(#E07747, 5);
-            color: white;
-
-            &:hover,
-            &:focus {
-                background: darken(#E07747, 3);
+            a {
+                @include font-size(14px);
             }
         }
-    }
+        .cards-wrapper {
+            grid-area: cards;
+        }
+        .custom-card {
+        
+            &:nth-child(1) {
+                margin-right: 15px;
+                background: url('http://localhost:8888/wordpress/wp-content/uploads/2019/02/StockSnap_54F76699E9.jpg');
+            }
 
-    .image {
-        width: 100%;
-        height: 600px;
-        background: gray;
-        cursor: pointer;
+            &:nth-child(2) {
+                background: url('http://localhost:8888/wordpress/wp-content/uploads/2019/02/himalayan-1509964_1920.jpg');
+            }
 
-        &:hover {
-            background-color: rgba(0,0,0,0.5);
+            background-repeat: no-repeat !important;
+            background-position: center !important;
+            background-size: cover !important;
+
+            width: 250px;
+            height: 420px;
         }
     }
-}
 
-@include mediaSm {
-    .landing-hero {
-        .landing-content {
-            .landing-text-content {
-                margin-top: 42%;
-                padding: 0 8%;
+    .front-page-single-product-wrapper {
+        .front-product-container {
+            min-height: 420px;
 
-                h1 {
-                    @include font-size(28px);
-                    padding-bottom: 5px;
+            .font-product-image,
+            .front-product-info {
+                width: 50%;
+            }
+
+            .front-product-info {
+                .front-product-price {
+                    color: $dark-gold;
+                    font-size: 1.25em;
                 }
 
-                p {
-                    @include font-size(12px);
-                    line-height: 2.5;
-                }
+                .front-product-button {
+                    width: 100%;
+                    background: $dark-gold;
+                    color: white;
 
-                button {
-                    background: #FFFFFF;
-
-                    a {
-                        @include font-size(10px);
+                    &:hover,
+                    &:focus {
+                        background: darken($dark-gold, 5);
                     }
                 }
             }
         }
     }
 
+    .faq-box {
+        width: 100%;
+        height: 640px;
+        position: relative;
+        margin-bottom: 20px;
+        overflow: hidden;
+
+        &::after {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(to right, rgba(255, 236, 210, 0.4) 30%, rgba(252, 182, 159, 0.5) 100%);
+        }
+
+        h2 {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            color: white;
+            @include transform(tranlate(50%, -50%));
+        }
+
+        img {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            @include transition(all ease-out 0.3s);
+        }
+
+        &:hover, &:focus {
+            img {
+                @include transform(scale(1.1));
+            }
+        }
+    }
+}
+
+@include mediaSm {
+    .landing-hero {
+        background: url('http://localhost:8888/wordpress/wp-content/uploads/2019/02/DSC7562-e1551215739321.jpg');
+        background-position: center;
+
+        .landing-text-wrap {
+            text-align: center;
+            top: 78%;
+
+            h1 {
+                @include font-size(28px);
+                line-height: 32px;
+                margin-bottom: 0;
+            }
+
+            p {
+                width: 100%;
+            }
+
+            h1,
+            p {
+                width: 100%;
+            }
+
+            h1,
+            p,
+            button {
+                margin-left: 0;
+            }
+        }
+    }
+
+    .front-section {
+        padding: 10% 0;
+        .col-sm-12:nth-child(1) {
+            margin-bottom: 5%;
+        }
+
+        .front-card-container {
+            grid-template-columns: 1fr;
+            grid-template-rows: 1auto 1fr;
+            grid-template-areas: "benefits" "cards";
+            
+            .custom-card {
+                display: none;
+            }
+            
+            .benefits-text {
+                width: 100%;
+            }
+        }
+    }
 }

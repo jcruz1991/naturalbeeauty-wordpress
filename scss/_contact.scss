@@ -19,7 +19,7 @@ div.wpforms-container-full .wpforms-form input[type=week],
 div.wpforms-container-full .wpforms-form select,
 div.wpforms-container-full .wpforms-form textarea {
     border: 1px solid #EEE;
-    color: #444;
+    color: $black;
     padding: 8px 10px;
     @include font-size(14px);
 }
@@ -36,7 +36,7 @@ div.wpforms-container-full .wpforms-form .wpforms-field-description {
 
 div.wpforms-container-full .wpforms-form .wpforms-field-label {
     @include font-size(10px);
-    color: #393939;
+    color: $black;
     line-height: 1.5;
     text-transform: uppercase;
     font-family: $header-font;
@@ -68,7 +68,7 @@ div.wpforms-container-full .wpforms-form input[type=submit],
 div.wpforms-container-full .wpforms-form button[type=submit],
 div.wpforms-container-full .wpforms-form .wpforms-page-button {
     display: inline-block;
-    background: #BEAF8C;
+    background: $gold;
     color: white;
     width: 100%;
     padding: 10px 35px;
@@ -79,6 +79,6 @@ div.wpforms-container-full .wpforms-form .wpforms-page-button {
     @include transition(all ease-out 0.3s);
 
     &:hover, &:focus {
-        background: darken(#BEAF8C, 10);
+        background: darken($gold, 10);
     }
 }

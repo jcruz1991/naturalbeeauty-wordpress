@@ -142,8 +142,6 @@ function naturalbeeauty_scripts() {
 	wp_deregister_script('jquery');
 	wp_enqueue_script( 'jquery', get_template_directory_uri() . '/js/jquery-3.3.1.min.js', array(), '20151215', true );
 
-	wp_enqueue_script( 'superfish', get_template_directory_uri() . '/js/superfish.min.js', array(), '20151215', true );
-
 	wp_enqueue_script( 'bootstrap-js', get_template_directory_uri() . '/js/bootstrap.min.js', array(), '20151215', true );
 
 	wp_enqueue_script( 'nb-custom', get_template_directory_uri() . '/js/main.js', array(), '20151215', true );

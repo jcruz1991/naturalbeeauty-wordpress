@@ -3,16 +3,16 @@
 --------------------------------------------------------------*/
 
 a {
-	color: #505050;
+	color: $light-black;
 	text-decoration: none;
 	@include transition(all ease-in 0.4s);
 
 	&:visited {
-		color: #505050;
+		color: $light-black;
 	}
 
 	&:hover {
-		color: #E07747;
+		color: $dark-gold;
 		text-decoration: none;
 	}
 

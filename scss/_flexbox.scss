@@ -135,3 +135,37 @@
     -ms-align-self: $align;
     align-self: $align;
 }
+
+
+.flex {
+    @include flexbox();
+    @include flex-wrap(wrap);
+}
+
+.flex-center {
+    @include justify-content(center);
+    @include align-items(center);
+}
+.flex-align-items-center {
+    @include align-items(center);
+}
+
+.flex-space-between {
+    @include justify-content(space-between);
+}
+
+.flex-justify-center {
+    @include justify-content(center);
+}
+
+.flex-content-center {
+    @include align-content(center);
+}
+
+.flex-row {
+    @include flex-direction(row);
+}
+
+.flex-column {
+    @include flex-direction(column);
+}
