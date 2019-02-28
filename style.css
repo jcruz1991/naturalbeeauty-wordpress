@@ -762,6 +762,14 @@ textarea {
   padding: 8px;
   width: 100%; }
 
+input:-internal-autofill-previewed,
+input:-internal-autofill-selected,
+textarea:-internal-autofill-previewed,
+textarea:-internal-autofill-selected,
+select:-internal-autofill-previewed,
+select:-internal-autofill-selected {
+  background-color: inherit; }
+
 /*--------------------------------------------------------------
 ## Links
 --------------------------------------------------------------*/
