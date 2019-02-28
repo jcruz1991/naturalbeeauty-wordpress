@@ -44,7 +44,6 @@
             @include transition(all ease-in 0.5s);
             @include flex-direction(column);
             @include align-items(center);
-            box-shadow: -9px 38px 35px -1px rgba(204,204,204,1);
         }
     }
 
