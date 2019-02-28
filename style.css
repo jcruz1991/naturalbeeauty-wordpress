@@ -768,7 +768,7 @@ textarea:-internal-autofill-previewed,
 textarea:-internal-autofill-selected,
 select:-internal-autofill-previewed,
 select:-internal-autofill-selected {
-  background-color: inherit; }
+  background-color: inherit !important; }
 
 /*--------------------------------------------------------------
 ## Links
