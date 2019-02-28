@@ -76,7 +76,7 @@ get_header();
                 <div class="container">
                     <a href="/wordpress/faq">
                         <div class="faq-box">
-                            <img src="http://localhost:8888/wordpress/wp-content/uploads/2019/02/DSC7716.jpg" alt="FAQ Image">
+                            <img src="https://naturalbeeauty.com/wp-content/uploads/2019/02/DSC7716.jpg" alt="FAQ Image">
                             <h2>FAQ</h2>
                         </div>
                     </a>
