@@ -1634,7 +1634,7 @@ div.wpforms-container-full .wpforms-form .wpforms-page-button {
 .front-section {
   width: 100%;
   height: 100%;
-  padding: 10% 0;
+  padding: 10% 0 0 0;
   background: whitesmoke; }
   .front-section .front-card-container {
     display: grid;
