@@ -15,7 +15,7 @@ get_header();
                 <div class="landing-text-wrap">
                     <h1>inspired by the beauty rituals of previous generations</h1>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                    <button><a href="">BUY NOW</a></button>
+                    <button><a href="https://naturalbeeauty.com/product/honey-cleanser-exfoliator/">BUY NOW</a></button>
             </div>
             </div><!-- .landing-hero -->
             <section class="front-section">
@@ -62,7 +62,7 @@ get_header();
                             <p>Why Honey?</p>
                             <h3>Learn About The Benefeits Of Our Ingredients</h3>
                             <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Unde repudiandae, sequi accusamus labore tempore non.</p>
-                            <a href="/wordpress/benefits">Learn More</a>
+                            <a href="/benefits">Learn More</a>
                         </div>
                     </div>
                 </div>
