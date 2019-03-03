@@ -139,6 +139,8 @@
             }
 
             .front-product-info {
+                padding-left: 7%;
+
                 .front-product-price {
                     color: $dark-gold;
                     font-size: 1.25em;
@@ -233,6 +235,21 @@
         padding: 10% 0;
         .col-sm-12:nth-child(1) {
             margin-bottom: 5%;
+        }
+
+        .front-page-single-product-wrapper {
+            .front-product-container {
+                .front-product-info {
+                    padding-left: 0;
+                    text-align: center;
+                    width: 100%;
+                    padding-top: 4%;
+
+                    .front-product-button {
+                        width: 60%;
+                    }
+                }
+            }
         }
 
         .front-card-container {

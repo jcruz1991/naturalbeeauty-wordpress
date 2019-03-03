@@ -1703,15 +1703,17 @@ div.wpforms-container-full .wpforms-form .wpforms-page-button {
     .front-section .front-page-single-product-wrapper .front-product-container .font-product-image,
     .front-section .front-page-single-product-wrapper .front-product-container .front-product-info {
       width: 50%; }
-    .front-section .front-page-single-product-wrapper .front-product-container .front-product-info .front-product-price {
-      color: #EABB6D;
-      font-size: 1.25em; }
-    .front-section .front-page-single-product-wrapper .front-product-container .front-product-info .front-product-button {
-      width: 100%;
-      background: #EABB6D;
-      color: white; }
-      .front-section .front-page-single-product-wrapper .front-product-container .front-product-info .front-product-button:hover, .front-section .front-page-single-product-wrapper .front-product-container .front-product-info .front-product-button:focus {
-        background: #e7b157; }
+    .front-section .front-page-single-product-wrapper .front-product-container .front-product-info {
+      padding-left: 7%; }
+      .front-section .front-page-single-product-wrapper .front-product-container .front-product-info .front-product-price {
+        color: #EABB6D;
+        font-size: 1.25em; }
+      .front-section .front-page-single-product-wrapper .front-product-container .front-product-info .front-product-button {
+        width: 100%;
+        background: #EABB6D;
+        color: white; }
+        .front-section .front-page-single-product-wrapper .front-product-container .front-product-info .front-product-button:hover, .front-section .front-page-single-product-wrapper .front-product-container .front-product-info .front-product-button:focus {
+          background: #e7b157; }
   .front-section .faq-box {
     width: 100%;
     height: 640px;
@@ -1776,6 +1778,13 @@ div.wpforms-container-full .wpforms-form .wpforms-page-button {
     padding: 10% 0; }
     .front-section .col-sm-12:nth-child(1) {
       margin-bottom: 5%; }
+    .front-section .front-page-single-product-wrapper .front-product-container .front-product-info {
+      padding-left: 0;
+      text-align: center;
+      width: 100%;
+      padding-top: 4%; }
+      .front-section .front-page-single-product-wrapper .front-product-container .front-product-info .front-product-button {
+        width: 60%; }
     .front-section .front-card-container {
       grid-template-columns: 1fr;
       grid-template-rows: 1auto 1fr;
