@@ -39,7 +39,7 @@ get_header();
                                 <h3><?php echo $product_name ?></h3>
                                 <p class="front-product-description"><?php echo $product_short_description ?></p>
                                 <p class="front-product-price">&#36;<?php echo $product_price ?></p>
-                               <a href="/wordpress/product/product-1/"><button class="front-product-button">View Product</button></a>
+                               <a href="https://naturalbeeauty.com/product/honey-cleanser-exfoliator/"><button class="front-product-button">View Product</button></a>
                             </div>
                         </div>
                     </div>
