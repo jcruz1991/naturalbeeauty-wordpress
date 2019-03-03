@@ -58,7 +58,7 @@ get_header();
                             <div class="custom-card"></div>
                             <div class="custom-card"></div>
                         </div>
-                        <div class="benefits-text flex flex-center text-center">
+                        <div class="benefits-text text-center">
                             <p>Why Honey?</p>
                             <h3>Learn About The Benefeits Of Our Ingredients</h3>
                             <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Unde repudiandae, sequi accusamus labore tempore non.</p>

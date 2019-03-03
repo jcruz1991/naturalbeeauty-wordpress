@@ -1695,6 +1695,24 @@ div.wpforms-container-full .wpforms-form .wpforms-page-button {
       display: inline-block; }
     .front-section .front-card-container .benefits-text {
       grid-area: benefits;
+      display: -webkit-box;
+      display: -moz-box;
+      display: -ms-flexbox;
+      display: -webkit-flex;
+      display: flex;
+      -webkit-flex-direction: column;
+      -moz-flex-direction: column;
+      -ms-flex-direction: column;
+      flex-direction: column;
+      -webkit-align-items: center;
+      -moz-align-items: center;
+      -ms-align-items: center;
+      align-items: center;
+      -webkit-justify-content: center;
+      -moz-justify-content: center;
+      -ms-justify-content: center;
+      justify-content: center;
+      -ms-flex-pack: center;
       width: 100%;
       padding: 0% 5%; }
       .front-section .front-card-container .benefits-text p :nth-child(1) {
