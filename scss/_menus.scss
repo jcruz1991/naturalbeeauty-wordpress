@@ -1,20 +1,38 @@
 /*--------------------------------------------------------------
 ## Menus
 --------------------------------------------------------------*/
+#nb-site-navigation, #nb-site-navigation, #woocommerce-site-navigation {
+	@include flex-grow(1);
+	@include flex-shrink(1);
+	@include flex-basis(0);
+}
+
 
 #nb-site-navigation {
 	padding: 0;
-	margin-left: auto;
 }
 
 .nb-sticky #nb-site-navigation {
 	padding: 0;
 }
 
+#woocommerce-site-navigation {
+	ul {
+		@include justify-content(flex-end);
+
+		li {
+			a {
+				margin: 0 10px;
+			}
+		}
+	}
+}
+
 .nb-main-navigation {
 	ul {
 		@include flexbox();
-		@include justify-content(space-around);
+		margin: 0;
+		padding: 0;
 	}
 
 	a {
@@ -206,11 +224,22 @@
 }
 
 .nav-active {
-	@include transform(translateX(0%) !important);
+	@include transform(translateX(-100%) !important);
+	ul {
+		li {
+			width: 100%;
+			padding-bottom: 7%;
+			border-top: 0.5px solid silver;
 
-	@for $i from 1 to 7 {
-		li:nth-child(#{$i}) {
-			@include animation(slide-in-right $i * 0.2s cubic-bezier(0.250, 0.460, 0.450, 0.940) both);
+			&:last-child {
+				border-bottom: 1px solid silver;
+			}
+		}
+
+		@for $i from 1 to 4 {
+			li:nth-child(#{$i}) {
+				@include animation(slide-in-left $i * 0.2s cubic-bezier(0.250, 0.460, 0.450, 0.940) both);
+			}
 		}
 	}
 }

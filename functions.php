@@ -49,8 +49,9 @@ if ( ! function_exists( 'naturalbeeauty_setup' ) ) :
 
 		// This theme uses wp_nav_menu() in one location.
 		register_nav_menus( array(
-			'menu-1' => esc_html__( 'Primary', 'naturalbeeauty' ),
-			'menu-2' => esc_html__( 'Footer Menu', 'naturalbeeauty' ),
+			'menu-1' => esc_html__( 'primary', 'naturalbeeauty' ),
+			'menu-2' => esc_html__( 'footer_menu', 'naturalbeeauty' ),
+			'menu-3' => esc_html__( 'woocommerce_menu', 'naturalbeeauty' ),
 		) );
 
 		/*
@@ -199,28 +200,32 @@ remove_action( 'woocommerce_after_single_product_summary', 'woocommerce_output_r
  * Add Login and Logout to top menu
  */
 
-add_filter( 'wp_nav_menu_main-menu_items', 'add_user_login_logout_nav_menu', 10, 2 );
+add_filter( 'wp_nav_menu_items', 'add_user_login_logout_nav_menu', 10, 2 );
 function add_user_login_logout_nav_menu($items, $args) {
 	// check is user is logged in
 	// is logged in appened logout button to top nav else appent login to nav
 	// .= is Concatenation assignment
-	if(is_user_logged_in()) {
-		$items .= '
+	if ($args->theme_location == 'menu-3') {
+		if(is_user_logged_in()) {
+			$items .= '
+				<li class="menu-item menu-item-type-post_type menu-item-object-page">
+					<a href="' . get_permalink( get_option( 'woocommerce_myaccount_page_id' ) ) . '">My Account</a>
+				</li>';
+		} else {
+			$items .= '
 			<li class="menu-item menu-item-type-post_type menu-item-object-page">
-				<a href="' . get_permalink( get_option( 'woocommerce_myaccount_page_id' ) ) . '">My Account</a>
+				<a href="' . get_permalink( get_option( 'woocommerce_myaccount_page_id' ) ) . '">
+				<img width=22 src="https://res.cloudinary.com/dd67kwah2/image/upload/v1551555085/avatar_1_zsatja.svg" alt="sign-in">
+				</a>
 			</li>';
-	} else {
-		$items .= '
-		<li class="menu-item menu-item-type-post_type menu-item-object-page">
-			<a href="' . get_permalink( get_option( 'woocommerce_myaccount_page_id' ) ) . '">Sign in</a>
-		</li>';
+		}
 	}
 	return $items;
 }
 
 
 //Append cart item (and cart count) to end of main menu.
-add_filter( 'wp_nav_menu_main-menu_items', 'am_append_cart_icon', 10, 2 );
+add_filter( 'wp_nav_menu_items', 'am_append_cart_icon', 10, 2 );
 function am_append_cart_icon( $items, $args ) {
 	// get current cart items count
 	$cart_item_count = WC()->cart->get_cart_contents_count();
@@ -234,12 +239,14 @@ function am_append_cart_icon( $items, $args ) {
 		<li class="cart menu-item menu-item-type-post_type menu-item-object-page">
 			<div class="cart-menu">
 				<a href="' . get_permalink( wc_get_page_id( 'cart' ) ) . '">
-				<img width=22 src="https://res.cloudinary.com/dd67kwah2/image/upload/v1549307411/shopping-bag_hrkog6.svg"/>
+				<img width=22 src="https://res.cloudinary.com/dd67kwah2/image/upload/v1549307411/shopping-bag_hrkog6.svg" alt="cart">
 				'.$cart_count_span.'
 				</a>
 			</div>
 		</li>';
 	// Add the cart link to the end of the menu.
-	$items = $items . $cart_link;
+	if ($args->theme_location == 'menu-3') {
+        $items .= $cart_link;
+	}
 	return $items;
 }

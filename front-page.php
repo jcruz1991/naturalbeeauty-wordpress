@@ -10,7 +10,7 @@ get_header();
 ?>
 
     <div id="primary" class="content-area font-primary">
-        <main id="lading-main" class="site-main">
+        <main id="landing-main" class="site-main">
             <div class="landing-hero">
                 <div class="landing-text-wrap">
                     <h1>inspired by the beauty rituals of previous generations</h1>
@@ -22,7 +22,7 @@ get_header();
                 <div class="front-page-single-product-wrapper">
                     <h2 class="text-center">Our Product</h2>
                     <?php
-                        $id= '11';
+                        $id= '11'; // 93 or 11
                         $product = wc_get_product( $id );
                         $product_name = $product->name;
                         $product_price = $product->price;

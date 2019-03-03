@@ -46,14 +46,14 @@
 
 /**
  * ----------------------------------------
- * animation slide-in-right
+ * animation slide-in-left
  * ----------------------------------------
  */
 
-@include keyframes(slide-in-right) {
+@include keyframes(slide-in-left) {
     0% {
-        -webkit-transform: translateX(1000px);
-        transform: translateX(1000px);
+        -webkit-transform: translateX(-2000px);
+        transform: translateX(-2000px);
         opacity: 0;
     }
 

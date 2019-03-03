@@ -13,6 +13,8 @@
         #menu-footer-main {
             @include flexbox();
             @include flex-direction(row);
+            @include justify-content(center);
+            @include flex-wrap(wrap);
 
             li {
                 padding-right: 24px;

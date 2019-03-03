@@ -24,6 +24,17 @@
 <div id="nb-page">
 	<header id="nb-masthead" class="nb-site-header">
 		<div class="nb-container nb-clearfix container">
+			<nav id="nb-site-navigation" class="nb-main-navigation">
+				<?php 
+				wp_nav_menu( array( 
+					'theme_location' => 'menu-1',
+					'container_class' => 'nb-menu nb-clearfix' ,
+					'menu_class' => 'nb-clearfix',
+					'items_wrap' => '<ul id="%1$s" class="%2$s">%3$s</ul>',
+				) ); 
+				?>
+			</nav><!-- #nb-site-navigation -->
+
 			<div id="nb-site-branding">
 				<?php 
 				if ( function_exists( 'has_custom_logo' ) && has_custom_logo() ) :
@@ -38,21 +49,21 @@
 				<?php endif; ?>
 			</div><!-- .site-branding -->
 
-			<nav id="nb-site-navigation" class="nb-main-navigation">
+			<div id="woocommerce-site-navigation" class="nb-main-navigation">
 				<?php 
-				wp_nav_menu( array( 
-					'theme_location' => 'menu-1',
-					'container_class' => 'nb-menu nb-clearfix' ,
-					'menu_class' => 'nb-clearfix',
-					'items_wrap' => '<ul id="%1$s" class="%2$s">%3$s</ul>',
-				) ); 
+					wp_nav_menu( array( 
+						'theme_location' => 'menu-3',
+						'container_class' => 'nb-menu nb-clearfix' ,
+						'menu_class' => 'nb-clearfix',
+						'items_wrap' => '<ul id="%1$s" class="%2$s">%3$s</ul>',
+					) ); 
 				?>
-			</nav><!-- #nb-site-navigation -->
-				<div class="toggle-bar">
-					<span></span>
-					<span></span>
-					<span></span>
-				</div>
+			</div>
+			<div class="toggle-bar">
+				<span></span>
+				<span></span>
+				<span></span>				
+			</div>
 		</div>
 	</header><!-- #nb-masthead -->
 
