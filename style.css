@@ -1197,6 +1197,24 @@ a {
     -ms-animation: slide-in-left 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
     -o-animation: slide-in-left 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
     animation: slide-in-left 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94) both; }
+  .nav-active ul li:nth-child(4) {
+    -webkit-animation: slide-in-left 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+    -moz-animation: slide-in-left 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+    -ms-animation: slide-in-left 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+    -o-animation: slide-in-left 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+    animation: slide-in-left 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94) both; }
+  .nav-active ul li:nth-child(5) {
+    -webkit-animation: slide-in-left 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+    -moz-animation: slide-in-left 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+    -ms-animation: slide-in-left 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+    -o-animation: slide-in-left 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+    animation: slide-in-left 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) both; }
+  .nav-active ul li:nth-child(6) {
+    -webkit-animation: slide-in-left 1.2s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+    -moz-animation: slide-in-left 1.2s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+    -ms-animation: slide-in-left 1.2s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+    -o-animation: slide-in-left 1.2s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+    animation: slide-in-left 1.2s cubic-bezier(0.25, 0.46, 0.45, 0.94) both; }
 
 @media screen and (max-width: 50em) {
   .nb-container {
@@ -1756,7 +1774,9 @@ div.wpforms-container-full .wpforms-form .wpforms-page-button {
   .landing-hero {
     height: 110vh;
     background: url("https://naturalbeeauty.com/wp-content/uploads/2019/02/DSC7562-e1551384780410.jpg");
-    background-position: center; }
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover; }
     .landing-hero .landing-text-wrap {
       text-align: center;
       top: 78%; }
