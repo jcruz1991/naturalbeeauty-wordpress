@@ -17,7 +17,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="profile" href="http://gmpg.org/xfn/11">
 <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
-
+<meta name="google-site-verification" content="j_F44aUvWgDabWrxzICeVx23nhZV3oiqfUY7-OhUwDk" />
 <?php wp_head(); ?>
 </head>
 <body <?php body_class(); ?>>
