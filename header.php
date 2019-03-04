@@ -18,6 +18,16 @@
 <link rel="profile" href="http://gmpg.org/xfn/11">
 <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
 <meta name="google-site-verification" content="j_F44aUvWgDabWrxzICeVx23nhZV3oiqfUY7-OhUwDk" />
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-116056049-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-116056049-1');
+</script>
+
 <?php wp_head(); ?>
 </head>
 <body <?php body_class(); ?>>
