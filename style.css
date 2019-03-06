@@ -1279,7 +1279,7 @@ a {
     right: 0;
     height: 110vh;
     width: 50%;
-    top: 89px;
+    top: 90px;
     background: #FFF;
     -moz-transform: translateX(-200%);
     -o-transform: translateX(-200%);
@@ -1636,8 +1636,7 @@ div.wpforms-container-full .wpforms-form .wpforms-page-button {
     border: 0.5px solid silver; }
 
 .landing-hero {
-  background: url("./images/landinghero.svg");
-  background-attachment: fixed;
+  background: url("./images/landinghero4.svg");
   background-repeat: no-repeat;
   background-size: cover;
   width: 100%;
@@ -1664,16 +1663,16 @@ div.wpforms-container-full .wpforms-form .wpforms-page-button {
       font-size: 2.5rem;
       font-weight: 700;
       letter-spacing: 1px;
-      line-height: 54px;
+      line-height: 40px;
       color: white; }
     .landing-hero .landing-text-wrap p {
       color: whitesmoke;
-      width: 35%;
+      width: 25%;
       font-size: 20px;
       font-size: 1.25rem; }
     .landing-hero .landing-text-wrap button {
       width: 150px;
-      height: 45px;
+      height: 36px;
       background: #EABB6D; }
       .landing-hero .landing-text-wrap button a {
         color: white; }
@@ -1791,20 +1790,22 @@ div.wpforms-container-full .wpforms-form .wpforms-page-button {
 @media screen and (max-width: 39.9375em) {
   .landing-hero {
     height: 110vh;
-    background: url("https://naturalbeeauty.com/wp-content/uploads/2019/03/69188060-96CF-4CDF-9DE2-7911FA76BC3B.jpeg");
+    background: url("./images/landinghero.svg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover; }
     .landing-hero .landing-text-wrap {
       text-align: center;
-      top: 78%; }
+      top: 74%; }
       .landing-hero .landing-text-wrap h1 {
         font-size: 28px;
         font-size: 1.75rem;
         line-height: 32px;
         margin-bottom: 0; }
       .landing-hero .landing-text-wrap p {
-        width: 100%; }
+        width: 100%;
+        font-size: 14px;
+        font-size: 0.875rem; }
       .landing-hero .landing-text-wrap h1,
       .landing-hero .landing-text-wrap p {
         width: 100%; }

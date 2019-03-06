@@ -13,8 +13,8 @@ get_header();
         <main id="landing-main" class="site-main">
             <div class="landing-hero">
                 <div class="landing-text-wrap">
-                    <h1>inspired by the beauty rituals of previous generations</h1>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                    <h1>Beauty lies skin deep</h1>
+                    <p>Discover the power of honey with Natural Beeauty</p>
                     <button><a href="https://naturalbeeauty.com/product/honey-cleanser-exfoliator/">BUY NOW</a></button>
             </div>
             </div><!-- .landing-hero -->
