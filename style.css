@@ -1921,12 +1921,14 @@ div.wpforms-container-full .wpforms-form .wpforms-page-button {
 *  Single Product Page element styling
 *
 *****************************************/
+.single-product-container div.product {
+  padding-top: 4%; }
+
 .single-product-container {
   padding-top: 5px; }
 
 .woocommerce div.product div.summary {
-  margin-top: 2%;
-  padding: 5%; }
+  padding: 0 5%; }
 
 .woocommerce div.product .woocommerce-tabs ul.tabs {
   padding: 0;
