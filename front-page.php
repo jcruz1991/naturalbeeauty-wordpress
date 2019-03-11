@@ -60,8 +60,8 @@ get_header();
                         </div>
                         <div class="benefits-text text-center">
                             <p>Why Honey?</p>
-                            <h3>Learn About The Benefeits Of Our Ingredients</h3>
-                            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Unde repudiandae, sequi accusamus labore tempore non.</p>
+                            <h3>Learn About The Benefit Of Our Ingredients</h3>
+                            <p>Honey contains antibacterial and anti-inflammatory properties that help fight acne and keep your skin hydrated and healthy looking.</p>
                             <a href="/benefits">Learn More</a>
                         </div>
                     </div>
