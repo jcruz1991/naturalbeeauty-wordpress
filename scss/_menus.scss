@@ -1,7 +1,9 @@
 /*--------------------------------------------------------------
 ## Menus
 --------------------------------------------------------------*/
-#nb-site-navigation, #nb-site-navigation, #woocommerce-site-navigation {
+#nb-site-navigation,
+#nb-site-navigation,
+#woocommerce-site-navigation {
 	@include flex-grow(1);
 	@include flex-shrink(1);
 	@include flex-basis(0);
@@ -228,7 +230,7 @@
 	ul {
 		li {
 			width: 100%;
-			padding-bottom: 7%;
+			padding: 7%;
 			border-top: 0.5px solid silver;
 
 			&:last-child {

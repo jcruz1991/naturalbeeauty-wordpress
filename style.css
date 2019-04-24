@@ -649,7 +649,7 @@ hr {
 
 ul,
 ol {
-  margin: 0 0 15px 20px;
+  margin: 0 0 15px 0px;
   padding: 0; }
 
 ul {
@@ -987,7 +987,9 @@ a {
 /*--------------------------------------------------------------
 ## Menus
 --------------------------------------------------------------*/
-#nb-site-navigation, #nb-site-navigation, #woocommerce-site-navigation {
+#nb-site-navigation,
+#nb-site-navigation,
+#woocommerce-site-navigation {
   -webkit-flex-grow: 1;
   -moz-flex-grow: 1;
   -ms-flex-grow: 1;
@@ -1175,7 +1177,7 @@ a {
   transform: translateX(-100%) !important; }
   .nav-active ul li {
     width: 100%;
-    padding-bottom: 7%;
+    padding: 7%;
     border-top: 0.5px solid silver; }
     .nav-active ul li:last-child {
       border-bottom: 1px solid silver; }
@@ -1224,7 +1226,15 @@ a {
     width: 80%;
     margin-left: -40%; }
   .toggle-bar {
-    display: block;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: column;
+    -moz-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
     position: absolute;
     left: 20px;
     top: 50%;
@@ -1233,32 +1243,31 @@ a {
     -ms-transform: translateY(-50%);
     -webkit-transform: translateY(-50%);
     transform: translateY(-50%); }
-  .toggle {
-    -webkit-animation: rotate-in-center 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
-    -moz-animation: rotate-in-center 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
-    -ms-animation: rotate-in-center 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
-    -o-animation: rotate-in-center 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
-    animation: rotate-in-center 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94) both; }
-    .toggle span {
-      -webkit-transition: all ease-out 0.2s;
-      -moz-transition: all ease-out 0.2s;
-      -ms-transition: all ease-out 0.2s;
-      -o-transition: all ease-out 0.2s;
-      transition: all ease-out 0.2s; }
-      .toggle span:nth-child(1) {
-        -moz-transform: translate(-7px, 13px) rotate(-45deg);
-        -o-transform: translate(-7px, 13px) rotate(-45deg);
-        -ms-transform: translate(-7px, 13px) rotate(-45deg);
-        -webkit-transform: translate(-7px, 13px) rotate(-45deg);
-        transform: translate(-7px, 13px) rotate(-45deg); }
-      .toggle span:nth-child(2) {
-        opacity: 0; }
-      .toggle span:nth-child(3) {
-        -moz-transform: translate(-5px, -7px) rotate(45deg);
-        -o-transform: translate(-5px, -7px) rotate(45deg);
-        -ms-transform: translate(-5px, -7px) rotate(45deg);
-        -webkit-transform: translate(-5px, -7px) rotate(45deg);
-        transform: translate(-5px, -7px) rotate(45deg); }
+    .toggle-bar span {
+      -webkit-transition: all 0.2s ease-out;
+      -moz-transition: all 0.2s ease-out;
+      -ms-transition: all 0.2s ease-out;
+      -o-transition: all 0.2s ease-out;
+      transition: all 0.2s ease-out; }
+      .toggle-bar span:nth-child(2) {
+        width: 85%; }
+      .toggle-bar span:nth-child(3) {
+        width: 65%; }
+  .toggle span:nth-child(1) {
+    -moz-transform: translate(0px, 7px) rotate(-45deg);
+    -o-transform: translate(0px, 7px) rotate(-45deg);
+    -ms-transform: translate(0px, 7px) rotate(-45deg);
+    -webkit-transform: translate(0px, 7px) rotate(-45deg);
+    transform: translate(0px, 7px) rotate(-45deg); }
+  .toggle span:nth-child(2) {
+    opacity: 0; }
+  .toggle span:nth-child(3) {
+    width: 100%;
+    -moz-transform: translate(1px, -13px) rotate(45deg);
+    -o-transform: translate(1px, -13px) rotate(45deg);
+    -ms-transform: translate(1px, -13px) rotate(45deg);
+    -webkit-transform: translate(1px, -13px) rotate(45deg);
+    transform: translate(1px, -13px) rotate(45deg); }
   #woocommerce-site-navigation {
     position: absolute;
     right: 20px;
@@ -1285,7 +1294,10 @@ a {
     -o-transform: translateX(-200%);
     -ms-transform: translateX(-200%);
     -webkit-transform: translateX(-200%);
-    transform: translateX(-200%); }
+    transform: translateX(-200%);
+    -webkit-box-shadow: 0 20px 30px rgba(7, 51, 84, 0.17);
+    -moz-box-shadow: 0 20px 30px rgba(7, 51, 84, 0.17);
+    box-shadow: 0 20px 30px rgba(7, 51, 84, 0.17); }
     #nb-site-navigation ul {
       -webkit-transition: all ease-in 0.5s;
       -moz-transition: all ease-in 0.5s;
@@ -2285,6 +2297,89 @@ thead .table-header th {
 .woocommerce-privacy-policy-text p {
   font-size: 12px;
   font-size: 0.75rem; }
+
+/*****************************************
+*
+*  Account Navigation
+*
+*****************************************/
+nav.woocommerce-MyAccount-navigation ul {
+  padding-left: 0;
+  max-width: 200px;
+  line-height: 26px; }
+  nav.woocommerce-MyAccount-navigation ul .is-active {
+    background-color: rgba(0, 0, 0, 0.1); }
+    nav.woocommerce-MyAccount-navigation ul .is-active a {
+      color: rgba(0, 0, 0, 0.8);
+      cursor: default; }
+    nav.woocommerce-MyAccount-navigation ul .is-active::after {
+      content: "";
+      height: 0;
+      width: 0;
+      border-top: 20px solid transparent;
+      border-left: 14px solid rgba(0, 0, 0, 0.1);
+      border-bottom: 20px solid transparent;
+      float: right;
+      margin-right: -34px;
+      margin-top: -7px; }
+  nav.woocommerce-MyAccount-navigation ul li {
+    padding: 8px 20px;
+    background-color: rgba(0, 0, 0, 0.05);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05); }
+    nav.woocommerce-MyAccount-navigation ul li:not(.is-active):hover {
+      background-color: rgba(0, 0, 0, 0.07); }
+      nav.woocommerce-MyAccount-navigation ul li:not(.is-active):hover::after {
+        content: "";
+        height: 0;
+        width: 0;
+        border-top: 20px solid transparent;
+        border-left: 14px solid rgba(0, 0, 0, 0.07);
+        border-bottom: 20px solid transparent;
+        float: right;
+        margin-right: -34px;
+        margin-top: -7px; }
+
+.woocommerce-account .woocommerce-MyAccount-navigation ul li.woocommerce-MyAccount-navigation-link--dashboard a:before {
+  font-family: 'Font Awesome 5 Free';
+  content: "\f3fd";
+  font-weight: 900;
+  display: inline-block;
+  padding-right: 10px; }
+
+.woocommerce-account .woocommerce-MyAccount-navigation ul li.woocommerce-MyAccount-navigation-link--orders a:before {
+  font-family: 'Font Awesome 5 Free';
+  content: "\f07a";
+  font-weight: 900;
+  display: inline-block;
+  padding-right: 10px; }
+
+.woocommerce-account .woocommerce-MyAccount-navigation ul li.woocommerce-MyAccount-navigation-link--downloads a:before {
+  font-family: 'Font Awesome 5 Free';
+  content: "\f019";
+  font-weight: 900;
+  display: inline-block;
+  padding-right: 10px; }
+
+.woocommerce-account .woocommerce-MyAccount-navigation ul li.woocommerce-MyAccount-navigation-link--edit-address a:before {
+  font-family: 'Font Awesome 5 Free';
+  content: "\f2bb";
+  font-weight: 900;
+  display: inline-block;
+  padding-right: 10px; }
+
+.woocommerce-account .woocommerce-MyAccount-navigation ul li.woocommerce-MyAccount-navigation-link--edit-account a:before {
+  font-family: 'Font Awesome 5 Free';
+  content: "\f2bd";
+  font-weight: 900;
+  display: inline-block;
+  padding-right: 10px; }
+
+.woocommerce-account .woocommerce-MyAccount-navigation ul li.woocommerce-MyAccount-navigation-link--customer-logout a:before {
+  font-family: 'Font Awesome 5 Free';
+  content: "\f2f5";
+  font-weight: 900;
+  display: inline-block;
+  padding-right: 10px; }
 
 /*--------------------------------------------------------------
 ## Footer

@@ -22,7 +22,7 @@ get_header();
                 <div class="front-page-single-product-wrapper">
                     <h2 class="text-center">Our Product</h2>
                     <?php
-                        $id= '11'; // 93 or 11
+                        $id= '93'; // 93 or 11
                         $product = wc_get_product( $id );
                         $product_name = $product->name;
                         $product_price = $product->price;
