@@ -226,15 +226,15 @@
 }
 
 .nav-active {
-	@include transform(translateX(-100%) !important);
+	@include transform(translateX(0%) !important);
 	ul {
 		li {
 			width: 100%;
 			padding: 7%;
-			border-top: 0.5px solid silver;
+			border-top: 0.5px solid #DDD;
 
 			&:last-child {
-				border-bottom: 1px solid silver;
+				border-bottom: 1px solid #DDD;
 			}
 		}
 

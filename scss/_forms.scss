@@ -60,10 +60,14 @@ input {
     &[type="color"] {
         width: 100%;
         padding: 3px 8px;
-        border: 1px solid #EEE;
+        border: 1px solid #DDD;
         @include font-size(16px);
         height: 40px;
         @include transition(all ease-out 0.3s);
+
+        &:focus {
+            box-shadow: 0 0 5px #CCC;
+        }
     }
 }
 

@@ -1,74 +1,80 @@
-.font-primary {
-    background: #F5F5F5;
-}
-
-.divider-wrapper {
-    position: relative;
-    .divider {
-        position: absolute;
-        left: 50%;
-        @include transform(translateX(-50%));
-        width: 50%;
-        border: 0.5px solid silver;
-    }
-}
-
 .landing-hero {
-    background: url('./images/landinghero4.svg');
-    background-repeat: no-repeat;
-    background-size: cover;
-    width: 100%;
-    height: 100vh;
-    position: relative;
+    height: 83vh;
+    background: #d6b577;
 
-    .landing-text-wrap {
-        position: absolute;
+    .banner,
+    .landing-text {
         width: 100%;
-        margin: auto;
-        top: 50%;
-        left: 0;
-        bottom: 0;
-        right: 0;
-        transform: translateY(-50%);
+        height: 100%;
+    }
 
-        h1,
-        p {
-            width: 50%;
+    .banner {
+        @include justify-content(center);
+
+        &-container {
+            position: relative;
+            margin: 35px 10% -25% 0%;
+            @include flexbox();
+            @include justify-content(center);
+            @include align-items(center);
+            width: 100%;
+            height: 100%;
+
+            &-fill {
+                padding: 25px 25px 35px 25px;
+                min-width: 575px;
+                height: 100%;
+                background: white;
+
+                .banner-image {
+                    width: 100%;
+                    height: 100%;
+                    background: url('./images/landinghero4.svg');
+                    background-repeat: no-repeat;
+                    background-size: auto;
+                    background-position: 87% 0%;
+                }
+            }
         }
+    }
 
-        h1,
-        p,
-        button {
-            margin-left: 8%;
-        }
+    .landing-text {
+        &-wrapper {
+            width: 100%;
+            height: 100%;
+            @include flexbox();
+            @include justify-content(flex-end);
+            @include flex-direction(column);
+            padding-bottom: 15%;
+            padding-right: 10%;
 
-        h1 {
-            @include font-size(40px);
-            font-weight: 700;
-            letter-spacing: 1px;
-            line-height: 40px;
-            color: white;
-        }
+            h1,
+            p {
+                color: white;
 
-        p {
-            color: whitesmoke;
-            width: 25%;
-            @include font-size(20px);
-        }
+            }
 
-        
-        button {
-            width: 150px;
-            height: 36px;
-            background: $dark-gold;
+            h1 {
+                font-size: 6.5vw;
+                font-weight: 600;
+                margin-bottom: 0;
+            }
+
+            p {
+                font-weight: 400;
+                line-height: 27px;
+            }
 
             a {
                 color: white;
-            }
+                @include transition(all 0.4s ease-out);
+                text-decoration: underline;
 
-            &:hover,
-            &:focus {
-                background: darken($dark-gold, 5);
+                &:hover {
+                    color: white;
+                    cursor: pointer;
+                    text-decoration: underline;
+                }
             }
         }
     }
@@ -78,167 +84,101 @@
     width: 100%;
     height: 100%;
     padding: 7% 0;
-    background: whitesmoke;
+    background: white;
+}
 
-    .front-card-container {
-        display: grid;
-        grid-template-columns: 60% 1fr;
-        grid-template-rows: 1fr;
-        grid-template-areas: "cards benefits";
+.product {
+    .product-text {
+        height: 100%;
+        @include flexbox();
+        @include justify-content(center);
+        @include flex-direction(column);
+        @include align-items(flex-start);
 
-        .custom-card,
-        .benefits-text {
-            display: inline-block;
+        .front-product-description {
+            margin-top: 15px;
         }
 
-        .benefits-text {
-            grid-area: benefits;
+        .front-product-price {
+            font-weight: bold;
+            color: $gold;
+        }
+    }
+}
+
+.cards {
+    @include flexbox();
+    @include flex-direction(row);
+    @include flex-wrap(wrap);
+    @include justify-content(center);
+
+    .card {
+        @include flexbox();
+        @include flex-direction(column);
+        @include justify-content(center);
+        border: none;
+        background: $dark-gold;
+        margin: 0 20px;
+        max-width: 348px;
+        height: 360px;
+
+        .card-body {
             @include flexbox();
             @include flex-direction(column);
-            @include align-items(center);
             @include justify-content(center);
-            width: 100%;
-            padding: 0% 5%;
+
+            h2 {
+                @include font-size(40px);
+            }
+
+            h2,
             p {
-                :nth-child(1) {
-                    @include font-size(12px);
-                }
-            }
-
-            a {
-                @include font-size(14px);
-            }
-        }
-        .cards-wrapper {
-            grid-area: cards;
-        }
-        .custom-card {
-        
-            &:nth-child(1) {
-                margin-right: 15px;
-                background: url('https://naturalbeeauty.com/wp-content/uploads/2019/02/StockSnap_54F76699E9.jpg');
-            }
-
-            &:nth-child(2) {
-                background: url('https://naturalbeeauty.com/wp-content/uploads/2019/02/himalayan-1509964_1920.jpg');
-            }
-
-            background-repeat: no-repeat !important;
-            background-position: center !important;
-            background-size: cover !important;
-
-            width: 250px;
-            height: 420px;
-        }
-    }
-
-    .front-page-single-product-wrapper {
-        .front-product-container {
-            min-height: 420px;
-
-            .font-product-image,
-            .front-product-info {
-                width: 50%;
-            }
-
-            .front-product-info {
-                padding-left: 7%;
-
-                .front-product-price {
-                    color: $dark-gold;
-                    font-size: 1.25em;
-                }
-
-                .front-product-button {
-                    width: 100%;
-                    background: $dark-gold;
-                    color: white;
-
-                    &:hover,
-                    &:focus {
-                        background: darken($dark-gold, 5);
-                    }
-                }
-            }
-        }
-    }
-
-    .faq-box {
-        width: 100%;
-        height: 640px;
-        position: relative;
-        margin-bottom: 20px;
-        overflow: hidden;
-        
-        &::after {
-            content: '';
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(to right, rgba(255, 236, 210, 0.4) 30%, rgba(252, 182, 159, 0.5) 100%);
-        }
-
-        h2 {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            color: white;
-            @include transform(translate(-50%, -50%));
-        }
-
-        img {
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            @include transition(all ease-out 0.3s);
-        }
-
-        &:hover, &:focus {
-            img {
-                @include transform(scale(1.1));
+                color: white;
             }
         }
     }
 }
 
 @include mediaSm {
-    .landing-hero {
-        height: 110vh;
-        background: url('./images/landinghero.svg');
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: cover;
 
-        .landing-text-wrap {
-            text-align: center;
-            top: 74%;
+    .landing-hero {
+        height: 100%;
+
+        .banner {
+            margin-top: 45px;
+
+            &-container {
+                margin: -5px 10% -25% 0%;
+                padding: 0px 0 30px 0;
+
+                &-fill {
+                    min-width: 381px;
+                    height: 450px;
+
+                    .banner-image {
+                        background-position: 72% 19%;
+                    }
+                }
+            }
+        }
+
+        .landing-text {
+            padding: 72px 0 40px 0;
+
+            &-wrapper {
+                // top: 0;
+                // bottom: 0;
+            }
 
             h1 {
-                @include font-size(28px);
-                line-height: 32px;
-                margin-bottom: 0;
-            }
-
-            p {
-                width: 100%;
-                @include font-size(14px);
-            }
-
-            h1,
-            p {
-                width: 100%;
-            }
-
-            h1,
-            p,
-            button {
-                margin-left: 0;
+                font-size: 16vw;
             }
         }
     }
 
     .front-section {
         padding: 10% 0;
+
         .col-sm-12:nth-child(1) {
             margin-bottom: 5%;
         }
@@ -261,12 +201,12 @@
         .front-card-container {
             grid-template-columns: 1fr;
             grid-template-rows: 1auto 1fr;
-            grid-template-areas: "benefits" "cards";
-            
+            grid-template-areas: "benefits""cards";
+
             .custom-card {
                 display: none;
             }
-            
+
             .benefits-text {
                 width: 100%;
             }

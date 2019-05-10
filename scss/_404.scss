@@ -1,0 +1,25 @@
+.error-404, .not-found {
+    min-height: 70vh;
+    @include flexbox();
+    @include justify-content(center);
+    @include align-items(center);
+
+    .error-container {
+        @include flexbox();
+        @include justify-content(center);
+        @include align-items(center);
+        @include flex-direction(column);
+        background: $dark-gold;
+        width: 64vw;
+        height: 400px;
+        padding: 46px;
+        text-align: center;
+        h1, h2, p {
+            color: white;
+        }
+
+        h1 {
+            @include font-size(122px);
+        }
+    }
+}

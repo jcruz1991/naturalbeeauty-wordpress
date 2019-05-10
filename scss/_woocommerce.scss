@@ -42,14 +42,14 @@
 .woocommerce ul.products li.product .button,
 .woocommerce div.product form.cart .button {
     color: #FFFFFF;
-    background: $light-black;
-    border: 1px solid $light-black;
+    background: $black;
+    border: 2px solid $black;
     @include font-size(14px);
     padding: 10px 20px;
 
     &:hover {
-        background: darken($light-black, 5);
-        border: 1px solid darken($light-black, 5);
+        background: tranparent;
+        color: $black;
     }
 }
 
@@ -113,6 +113,17 @@
     padding: 0 5%;
 }
 
+.woocommerce-tabs,
+.wc-tabs-wrapper {
+    padding-top: 12%;
+}
+
+
+.tabs, wc-tabs {
+    text-align: center !important;
+    border-top: 1px solid #DDD !important;
+}
+
 .woocommerce div.product .woocommerce-tabs ul.tabs {
     padding: 0;
     margin: 0;
@@ -142,7 +153,7 @@
 
 .woocommerce div.product .woocommerce-tabs ul.tabs li.active {
     background: inherit;
-    border-bottom: 1px solid #77A464;
+    border-top: 3px solid $dark-gold;
 }
 
 .woocommerce div.product .woocommerce-tabs ul.tabs li a {
@@ -157,6 +168,10 @@
 .single_add_to_cart_button .button .alt {
     width: 100%;
     margin-top: 5%;
+}
+
+.woocommerce div.product div.images .flex-control-thumbs li {
+    width: 15%;
 }
 
 /*****************************************
@@ -338,9 +353,11 @@ thead {
 .woocommerce button.button.alt,
 .woocommerce input.button.alt {
     background-color: $dark-gold;
+    border-color: $dark-gold;
 
     &:hover {
         background-color: darken($dark-gold, 5);
+        border-color: darken($dark-gold, 5);
     }
 }
 
@@ -355,8 +372,6 @@ thead {
 }
 
 .woocommerce .quantity .qty {
-    border-radius: 40px 0 0 40px;
-    border-right: none;
     padding: 0;
     margin: 0;
 }
@@ -364,17 +379,20 @@ thead {
 .product-quantity {
     .quantity {
         input {
-            border-right: 1px solid #979797 !important;
-            border-radius: inherit !important;
+            border-right: 1px solid #CCC !important;
         }
     }
 }
 
 .woocommerce div.product form.cart .button {
-    border-left: none;
-    border-radius: 0 40px 40px 0;
-    padding: 12px 20px;
+    margin-left: 10px;
+    padding: 11px 20px;
     width: 185px;
+
+    &:hover {
+        background: transparent;
+        color: $black;
+    }
 }
 
 .product-remove,
@@ -530,26 +548,46 @@ thead {
 .woocommerce form.login,
 .woocommerce form.register {
     border: none;
+    padding: 20px 0;
 }
 
 .woocommerce form .form-row label,
 .woocommerce-page form .form-row label {
     width: 100%;
+    font-weight: 600;
+    @include font-size(12px);
 }
 
 #wc-login-button,
 #wc-register-button {
     color: white;
-    background: $light-black;
-
-    &:hover {
-        background: darken($light-black, 5);
-    }
+    background: $black;
 }
 
 .woocommerce-privacy-policy-text {
     p {
         @include font-size(12px);
+
+        a {
+            color: $dark-gold;
+        }
+    }
+}
+
+.woocommerce .woocommerce-form-login,
+.woocommerce-form-login__rememberme {
+    padding: 12px 0;
+
+    span {
+        font-weight: 600;
+    }
+}
+
+.woocommerce-LostPassword,
+.lost_password {
+    a {
+        @include font-size(14px);
+        color: $dark-gold;
     }
 }
 
@@ -559,53 +597,25 @@ thead {
 *
 *****************************************/
 nav.woocommerce-MyAccount-navigation {
+    @include flexbox();
+    @include flex-direction(column);
+    @include justify-content(center);
+    @include align-items(center);
+    padding: 60px 2px;
+    background: #EABB6D;
+
+    h2,
+    a {
+        color: white;
+    }
+
     ul {
-        padding-left: 0;
-        max-width: 200px;
-        line-height: 26px;
-
-        .is-active {
-            background-color: rgba(0, 0, 0, 0.1);
-
-            a {
-                color: rgba(0, 0, 0, 0.8);
-                cursor: default;
-            }
-
-            &::after {
-                content: "";
-                height: 0;
-                width: 0;
-                border-top: 20px solid transparent;
-                border-left: 14px solid rgba(0, 0, 0, 0.1);
-                border-bottom: 20px solid transparent;
-                float: right;
-                margin-right: -34px;
-                margin-top: -7px;
-            }
-        }
-
         li {
-            padding: 8px 20px;
-            background-color: rgba(0, 0, 0, 0.05);
-            border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+            margin-top: 6px;
+            padding-top: 3px;
 
-            &:not(.is-active) {
-                &:hover {
-                    background-color: rgba(0, 0, 0, 0.07);
-
-                    &::after {
-                        content: "";
-                        height: 0;
-                        width: 0;
-                        border-top: 20px solid transparent;
-                        border-left: 14px solid rgba(0, 0, 0, 0.07);
-                        border-bottom: 20px solid transparent;
-                        float: right;
-                        margin-right: -34px;
-                        margin-top: -7px;
-                    }
-                }
+            &:not(:first-child) {
+                border-top: 1px solid white;
             }
         }
     }
