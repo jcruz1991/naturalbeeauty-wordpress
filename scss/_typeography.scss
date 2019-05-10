@@ -14,7 +14,8 @@ textarea {
 button,
 .woocommerce a.button,
 .woocommerce button.button,
-.woocommerce div.product form.cart .button {
+.woocommerce div.product form.cart .button,
+.woocommerce #review_form #respond .form-submit input {
 	display: inline-block;
 	border: 2px solid $black;
 	background: transparent;
@@ -55,20 +56,23 @@ h2 {
 }
 
 h3 {
-	font-size: 28px;
+	font-size: 30px;
 }
 
 h4 {
-	font-size: 26px;
+	font-size: 28px;
 }
 
 p {
-	line-height: 22px;
-	//letter-spacing: 1px;
+	line-height: 26px;
 }
 
 p, span {
 	font-weight: 300;
+}
+
+strong {
+	color: $black;
 }
 
 dfn,

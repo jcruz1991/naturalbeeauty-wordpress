@@ -509,7 +509,8 @@ textarea {
 button,
 .woocommerce a.button,
 .woocommerce button.button,
-.woocommerce div.product form.cart .button {
+.woocommerce div.product form.cart .button,
+.woocommerce #review_form #respond .form-submit input {
   display: inline-block;
   border: 2px solid #000000;
   background: transparent;
@@ -528,7 +529,8 @@ button,
   button:hover,
   .woocommerce a.button:hover,
   .woocommerce button.button:hover,
-  .woocommerce div.product form.cart .button:hover {
+  .woocommerce div.product form.cart .button:hover,
+  .woocommerce #review_form #respond .form-submit input:hover {
     background: #000000;
     color: #FFFFFF; }
 
@@ -552,16 +554,19 @@ h2 {
   font-size: 32px; }
 
 h3 {
-  font-size: 28px; }
+  font-size: 30px; }
 
 h4 {
-  font-size: 26px; }
+  font-size: 28px; }
 
 p {
-  line-height: 22px; }
+  line-height: 26px; }
 
 p, span {
   font-weight: 300; }
+
+strong {
+  color: #000000; }
 
 dfn,
 cite,
@@ -722,14 +727,18 @@ input[type="text"], input[type="email"], input[type="url"], input[type="password
     box-shadow: 0 0 5px #CCC; }
 
 textarea {
-  color: #404040;
   vertical-align: top;
   resize: none;
+  border: 1px solid #DDD;
+  font-size: 16px;
+  font-size: 1rem;
   -webkit-transition: all ease-in-out 0.3s;
   -moz-transition: all ease-in-out 0.3s;
   -ms-transition: all ease-in-out 0.3s;
   -o-transition: all ease-in-out 0.3s;
   transition: all ease-in-out 0.3s; }
+  textarea:focus {
+    box-shadow: 0 0 5px #CCC; }
 
 select {
   border: 1px solid #EEE;
@@ -1752,7 +1761,7 @@ div.wpforms-container-full .wpforms-form .wpforms-page-button {
     margin-top: 15px; }
   .product .product-text .front-product-price {
     font-weight: bold;
-    color: #ECD06F; }
+    color: #EABB6D; }
 
 .cards {
   display: -webkit-box;
@@ -1842,17 +1851,7 @@ div.wpforms-container-full .wpforms-form .wpforms-page-button {
       width: 100%;
       padding-top: 4%; }
       .front-section .front-page-single-product-wrapper .front-product-container .front-product-info .front-product-button {
-        width: 60%; }
-    .front-section .front-card-container {
-      grid-template-columns: 1fr;
-      grid-template-rows: 1auto 1fr;
-      grid-template-areas: "benefits" "cards"; }
-      .front-section .front-card-container .custom-card {
-        display: none; }
-      .front-section .front-card-container .benefits-text {
-        width: 100%; }
-    .front-section .faq-box {
-      height: 320px; } }
+        width: 60%; } }
 
 /*****************************************
 *
@@ -2001,6 +2000,9 @@ div.wpforms-container-full .wpforms-form .wpforms-page-button {
 
 .woocommerce div.product div.images .flex-control-thumbs li {
   width: 15%; }
+
+.woocommerce #reviews #comment {
+  height: auto; }
 
 /*****************************************
 *
@@ -2367,6 +2369,9 @@ nav.woocommerce-MyAccount-navigation {
     padding-top: 3px; }
     nav.woocommerce-MyAccount-navigation ul li:not(:first-child) {
       border-top: 1px solid white; }
+
+.woocommerce-account .woocommerce-MyAccount-navigation {
+  width: 23%; }
 
 .woocommerce-account .woocommerce-MyAccount-navigation ul li.woocommerce-MyAccount-navigation-link--dashboard a:before {
   font-family: 'Font Awesome 5 Free';

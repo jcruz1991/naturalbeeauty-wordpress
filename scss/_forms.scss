@@ -72,10 +72,15 @@ input {
 }
 
 textarea {
-    color: #404040;
     vertical-align: top;
     resize: none;
+    border: 1px solid #DDD;
+    @include font-size(16px);
     @include transition(all ease-in-out 0.3s);
+
+    &:focus {
+        box-shadow: 0 0 5px #CCC;
+    }
 }
 
 select {

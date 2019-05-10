@@ -101,7 +101,7 @@
 
         .front-product-price {
             font-weight: bold;
-            color: $gold;
+            color: $dark-gold;
         }
     }
 }
@@ -165,11 +165,6 @@
         .landing-text {
             padding: 72px 0 40px 0;
 
-            &-wrapper {
-                // top: 0;
-                // bottom: 0;
-            }
-
             h1 {
                 font-size: 16vw;
             }
@@ -196,24 +191,6 @@
                     }
                 }
             }
-        }
-
-        .front-card-container {
-            grid-template-columns: 1fr;
-            grid-template-rows: 1auto 1fr;
-            grid-template-areas: "benefits""cards";
-
-            .custom-card {
-                display: none;
-            }
-
-            .benefits-text {
-                width: 100%;
-            }
-        }
-
-        .faq-box {
-            height: 320px;
         }
     }
 }
