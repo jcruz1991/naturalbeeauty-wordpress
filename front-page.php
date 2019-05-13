@@ -10,7 +10,7 @@ get_header();
 ?>
 
 <?php
-$id = '93'; // 93 or 11
+$id = '11'; // 93 or 11
 $product = wc_get_product($id);
 $product_name = $product->name;
 $product_price = $product->price;
