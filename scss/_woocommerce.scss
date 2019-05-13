@@ -10,6 +10,18 @@
     height: 100%;
 }
 
+.woocommerce {
+    .star-rating {
+        color: $gold;
+    }
+
+    .stars {
+        a {
+            color: $gold;
+        }
+    }
+}
+
 /*****************************************
 *
 *  Shop page product elements styling
@@ -119,7 +131,8 @@
 }
 
 
-.tabs, wc-tabs {
+.tabs,
+wc-tabs {
     text-align: center !important;
     border-top: 1px solid #DDD !important;
 }
@@ -549,10 +562,14 @@ thead {
 *
 *****************************************/
 .woocommerce form.checkout_coupon,
-.woocommerce form.login,
 .woocommerce form.register {
     border: none;
     padding: 20px 0;
+}
+
+.woocommerce form.login {
+    padding: 0;
+    border: 0;
 }
 
 .woocommerce form .form-row label,
@@ -676,5 +693,32 @@ nav.woocommerce-MyAccount-navigation {
         font-weight: 900;
         display: inline-block;
         padding-right: 10px;
+    }
+}
+
+
+/*****************************************
+*
+*  Comments/Reviews
+*
+*****************************************/
+
+#comments {
+    .woocommerce-Reviews-title {
+        padding-bottom: 20px;
+    }
+    .comment_container {
+        padding: 12px 20px;
+        box-shadow: 0 0 6px #DDD;
+
+        .avatar {
+            position: relative !important;
+        }
+
+        .comment-text {
+            border: none !important;
+            margin: 0 !important;
+            padding: 0 !important;
+        }
     }
 }

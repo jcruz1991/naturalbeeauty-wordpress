@@ -121,6 +121,13 @@
         margin: 0 20px;
         max-width: 348px;
         height: 360px;
+        @include transition(all ease-out 0.2s);
+
+        &:hover,
+        &:focus {
+            box-shadow: 0 0 6px #DDD;
+            background: darken($dark-gold, 5);
+        }
 
         .card-body {
             @include flexbox();
@@ -177,20 +184,11 @@
         .col-sm-12:nth-child(1) {
             margin-bottom: 5%;
         }
+    }
 
-        .front-page-single-product-wrapper {
-            .front-product-container {
-                .front-product-info {
-                    padding-left: 0;
-                    text-align: center;
-                    width: 100%;
-                    padding-top: 4%;
-
-                    .front-product-button {
-                        width: 60%;
-                    }
-                }
-            }
+    .cards {
+        .card {
+            margin-bottom: 16px;
         }
     }
 }

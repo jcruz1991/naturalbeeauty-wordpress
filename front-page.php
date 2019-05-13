@@ -19,6 +19,7 @@ $url = get_permalink($id);
 // Get Product Images
 $product_image = get_the_post_thumbnail_url($product->get_id(), 'large');
 ?>
+
 <div id="primary" class="content-area font-primary">
     <main id="landing-main" class="site-main">
         <div class="landing-hero">
@@ -77,12 +78,14 @@ $product_image = get_the_post_thumbnail_url($product->get_id(), 'large');
                         <div class="col-md-6 col-sm-12">
                             <h2>Learn more about the <br> benefits of our ingredients</h2>
                             <div class="divider"></div>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt atque sed nemo laboriosam itaque et rem pariatur fugit nobis aliquam sunt praesentium tempore natus labore, ex sit commodi magni. Quam.</p>
+                            <p>Our Organic Honey Face Scrub contains a perfect blend of honey, salt, royal jelly, collagen and liquid oxygen to help fight against acne and damaged skiin!</p>
                         </div>
                         <div class="col-md-6 col-sm-12">
-                            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Doloribus voluptatum totam, numquam consectetur adipisci omnis! Necessitatibus eaque nihil impedit molestias omnis fuga, veniam voluptate corrupti illum, voluptatem explicabo aperiam eos!</p>
-
-                            <button>Read More</button>
+                            <p>Honey antibacterial and anti-inflammatory properties help reduce skin redness,nourish damaged skin, helping to fight against scars and overall swelling of pimples.</p>
+                            <p>Salt contains antiseptic qualities which help kill bacteria and reduce inflammation. In addition, scrubbing with salt helps improve circulation around the skin, removes bacteria and unclog pores.</p>
+                            <a href="<?php echo get_page_link(get_page_by_title('benefits')->ID); ?>">
+                                <button>Read More</button>
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -93,13 +96,14 @@ $product_image = get_the_post_thumbnail_url($product->get_id(), 'large');
             <div class="benefits-container">
                 <div class="container-fluid">
                     <div class="cards">
-                        <div class="card">
-                            <div class="card-body">
-                                <h2>Experience the power of honey</h2>
-                                <p>Learn more about our all natural handmade honey facial scrub.</p>
-                                <a href="<?php echo $url; ?>">View</a>
+                        <a href="<?php echo $url; ?>">
+                            <div class="card">
+                                <div class="card-body">
+                                    <h2>Experience the power of honey</h2>
+                                    <p>Learn more about our all natural, handmade honey facial scrub!</p>
+                                </div>
                             </div>
-                        </div>
+                        </a>
                         <a href="<?php echo get_page_link(get_page_by_title('faq')->ID); ?>">
                             <div class="card">
                                 <div class="card-body">
@@ -120,20 +124,7 @@ $product_image = get_the_post_thumbnail_url($product->get_id(), 'large');
                 </div>
             </div>
         </section><!-- END OF SECTION -->
-</div>
-<!--END OF DIVIDER -->
-<!--START OF SECTION -->
-<section class="front-section">
-    <!-- <div class="container">
-        <a href="/wordpress/faq">
-            <div class="faq-box">
-                <img src="https://naturalbeeauty.com/wp-content/uploads/2019/02/DSC7716.jpg" alt="FAQ Image">
-                <h2>FAQ</h2>
-            </div>
-        </a>
-    </div> -->
-</section><!-- END OF SECTION -->
-</main><!-- #main -->
+    </main><!-- #main -->
 </div><!-- #primary -->
 
 <?php get_footer(); ?>
